@@ -1,0 +1,40 @@
+credentials:
+  usernames:
+    admin_test:
+      email: ittone@gmail.com
+      name: Menyhert Kristof
+      password: $2b$12$mjzFj.x.jPuGOcvxzKOt2ejfohkzXoMa3fL/Wr4kSnq1v7IkuPrlu
+      szamlazasi_cim: "Deak Ferenc Ter 56"
+    admin:
+      email: info@cleango.hu
+      name: Cleango Admin
+      password: $2b$12$idRYqHmC6hFPprAg.coVW.OUeZhJE6FThBS6h2TFUyr9gtBOBO4bq
+      szamlazasi_cim: "Proba cim 134"
+    peri:
+      email: peri@peri.hu
+      name: "Peri Kft"
+      password: $2b$12$aO9DBdA3pHGkqh9uUE8yt.8LTO4AlrMBqtCa9YlBa35lZ30yhItpi
+      szamlazasi_cim: "Peri KFT. -  1181 Budapest, Zádor utca 9."
+    poli:
+      email: poli@poli.hu
+      name: "Poli Computer PC Kft."
+      password: $2b$12$1MiV/KnZZ8by3a2iwEdS/uIyi4AdqLxo.pnYifGqg75gauH2ZVWOq
+      szamlazasi_cim: "Poli Computer PC Kft. -  1037 Budapest, Montevideo utca 8."
+    chs:
+      email: chs@chs.hu
+      name: "CHS Hungary Kft."
+      password: $2b$12$bcLsoH32L4wV8wWdIaiXVecV0M6LMcvYk87q6KGLFktSEo0s7OAMS
+      szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
+    bonafarm:
+      email: bonafarm@bonafarm.hu
+      name: "Bonafarm Zrt."
+      szamalazasi_cim: "Bonafarm Zrt. - 1123 Budapest, Alkotás utca 53."
+      password: $2b$12$/AUD6UY9rv72URTGQfx7RuPZ3dgfYDQAC96ZOqsB0dA1ZBt/bIyzy
+
+cookie:
+  expiry_days: 0
+  key: random_signature_key_abc # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - random@gmailproba.com
