@@ -30,6 +30,11 @@ credentials:
       name: "Bonafarm Zrt."
       szamalazasi_cim: "Bonafarm Zrt. - 1123 Budapest, Alkotás utca 53."
       password: $2b$12$/AUD6UY9rv72URTGQfx7RuPZ3dgfYDQAC96ZOqsB0dA1ZBt/bIyzy
+    bonitas:
+      email: bonitas@bonitas.hu
+      name: "Bonitás Befektetési Alapkezelő Zrt."
+      szamlazasi_nev: "Bonitás Befektetési Alapkezelő Zrt. - 1123 Budapest, Alkotás utca 53. B. ép."
+      password: $2b$12$jvhBAs.4iwOXMHBQGBh4qeqleGn/2indY7FBvIYv/OLJaW5mciH4m
 
 cookie:
   expiry_days: 0
