@@ -8,7 +8,8 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
-st.set_page_config(layout='wide')
+#set streamlit page name
+st.set_page_config(page_title='B2B Rendelő felület', page_icon='data/cleango-logo-small.png', layout='wide')
 
 col1, col2 = st.columns([2, 8])
 with col1:
