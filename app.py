@@ -9,7 +9,7 @@ import yaml
 from yaml.loader import SafeLoader
 
 #set streamlit page name
-st.set_page_config(page_title='B2B Rendelő felület', page_icon='data/cleango-logo-small.png', layout='wide')
+st.set_page_config(page_title='CleanGo - B2B Rendelő felület', page_icon='data/cleango-logo-small.png', layout='wide')
 
 col1, col2 = st.columns([2, 8])
 with col1:
