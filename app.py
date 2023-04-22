@@ -55,3 +55,4 @@ elif authentication_status == None:
     with col1:
         st.warning('Please enter your username and password')
         st.write("If you don't have an account, please contact us at: info@cleango.hu")
+        st.write("Or call us at: +36 30 141 5100")

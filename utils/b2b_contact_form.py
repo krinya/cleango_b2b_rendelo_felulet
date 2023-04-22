@@ -128,6 +128,10 @@ def create_b2b_form(authenticator, username, name, config):
     email_body_to_user = 'Köszönjük megrendelését a CleanGo B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
         username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
 
+    st.write("If something want wrong you can reach us via:")
+    st.write("Email: info@cleango.hu")
+    st.write("Phone: +36 30 141 5100")
+
     if st.button("Send Order"):
         
         # send the email to CleanGo
