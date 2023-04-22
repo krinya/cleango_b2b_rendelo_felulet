@@ -152,6 +152,6 @@ def create_b2b_form(authenticator, username, name, config):
                 st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
     
     with col2:
-        st.write("If something want wrong you can reach us via:")
+        st.write("If something went wrong you can reach us via:")
         st.write("Email: info@cleango.hu")
         st.write("Phone: +36 30 141 5100")
