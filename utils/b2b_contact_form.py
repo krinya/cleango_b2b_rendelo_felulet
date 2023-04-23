@@ -129,7 +129,7 @@ def create_b2b_form(authenticator, username, name, config):
 
     email_body_to_us = 'Űj mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfel név: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
         username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
-    email_body_to_user = 'Köszönjük megrendelését a CleanGo B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
+    email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
         username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
 
 
@@ -150,7 +150,7 @@ def create_b2b_form(authenticator, username, name, config):
             
             # send the email to the user
             try:
-                send_email(email_user, "CleanGo B2B Rendeles Visszaigazolas", email_body_to_user)
+                send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolas", email_body_to_user)
                 st.write(" {}".format(email_user))
             except:
                 st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
