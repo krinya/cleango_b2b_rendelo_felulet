@@ -71,14 +71,16 @@ def create_b2b_form(authenticator, username, name, config):
 
     col1, col2, col3 = st.columns([6, 1, 1])
     with col1:
-        st.write("Wellcome {}. You are logged in as {}.".format(name, username))
+        st.write("{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(name, username))
     with col3:
         authenticator.logout('Logout', 'main')
 
-    st.markdown("### Autómosást az alábbi ürlap kitöltésével addhatsz le. Add meg a rendelés adatait, majd kattints a lap alján található Rendelés gombra")
+    st.markdown("### Autómosást az alábbi ürlap kitöltésével tul leadni. Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
     st.markdown("***")
     
     st.markdown('### Mosás időpontja, Mosás helyszíne')
+    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét.")
+    st.markdown("Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk ,vagy van még szabad kapacitásunk.")
     col1, col2 = st.columns([2, 2])
     with col1:
         mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja", nyitvatartas_df_nyitva_list)
@@ -91,7 +93,7 @@ def create_b2b_form(authenticator, username, name, config):
         number_plate = st.text_input("Rendszám")
         auto_markak_tipusok = st.selectbox("Auto márka tipus", auto_markak_tipusok_list)
     
-    st.markdown('### Milyen mosást szerentél rendelni?')
+    st.markdown('### Milyen típusú mosást szerentne rendelni?')
     col1, col2 = st.columns([2, 2])
     with col1:
         alapszolg = st.radio("Alapszolgáltatás", ("Külső + Belső", "Csak Külső", "Csak Belső"))
@@ -99,6 +101,7 @@ def create_b2b_form(authenticator, username, name, config):
         extrak = st.multiselect("Extrák", extrak_df_list)
 
     st.markdown('### Kapcsolat')
+    st.markdown("Kérjük adon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
     col1, col2 = st.columns([2, 2])
     with col1:
         nev = st.text_input("Név")
@@ -111,7 +114,7 @@ def create_b2b_form(authenticator, username, name, config):
     try:
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
     except:
-        szamlazasi_infok_default = "Add meg a szamlási címet"
+        szamlazasi_infok_default = "Adja meg a szamlási címet"
     st.markdown('### Számlázasi Információk')
     szamlazasi_info_radio = st.radio("Számlázási információk", (szamlazasi_infok_default, "Egyéb"))
     if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázasi cimet")):
@@ -120,6 +123,7 @@ def create_b2b_form(authenticator, username, name, config):
         szamlazasi_infok = szamlazasi_info_radio
 
     st.markdown('### Megjegyzés')
+    st.markdown("Ha van még valami, amit plusszban szeretne közölni velünk, akkor írja be az alábbi mezőbe.")
     megjegyzes = st.text_area("Megjegyzés")
     email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
@@ -152,6 +156,6 @@ def create_b2b_form(authenticator, username, name, config):
                 st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
     
     with col2:
-        st.write("If something went wrong you can reach us via:")
+        st.write("Ha valami kérdése van, kérjük keressen minket a következő elérhetőségeken:")
         st.write("Email: info@cleango.hu")
-        st.write("Phone: +36 30 141 5100")
+        st.write("Telefon: +36 30 141 5100")

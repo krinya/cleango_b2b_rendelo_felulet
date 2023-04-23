@@ -39,7 +39,7 @@ credentials:
       email: karesz@karesz.hu
       name: "Karesz"
       szamlazasi_cim: "Karesz - Karesz cime"
-      passwrod: $2b$12$EmKGkdMZ5mgg3lFwGLgz7eh2TiUnVGsZC8w8wyNj.9MUj/BNR8YTG
+      password: $2b$12$EmKGkdMZ5mgg3lFwGLgz7eh2TiUnVGsZC8w8wyNj.9MUj/BNR8YTG
 
 cookie:
   expiry_days: 0
