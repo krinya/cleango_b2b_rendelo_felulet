@@ -35,6 +35,11 @@ credentials:
       name: "Bonitás Befektetési Alapkezelő Zrt."
       szamlazasi_cim: "Bonitás Befektetési Alapkezelő Zrt. - 1123 Budapest, Alkotás utca 53. B. ép."
       password: $2b$12$jvhBAs.4iwOXMHBQGBh4qeqleGn/2indY7FBvIYv/OLJaW5mciH4m
+    karesz:
+      email: karesz@karesz.hu
+      name: "Karesz"
+      szamlazasi_cim: "Karesz - Karesz cime"
+      passwrod: $2b$12$EmKGkdMZ5mgg3lFwGLgz7eh2TiUnVGsZC8w8wyNj.9MUj/BNR8YTG
 
 cookie:
   expiry_days: 0

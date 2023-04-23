@@ -133,7 +133,7 @@ def create_b2b_form(authenticator, username, name, config):
 
     with col1:
 
-        if st.button("Send Order"):
+        if st.button("Rendelés"):
             
             # send the email to CleanGo
             for email_adress_to_us in email_list_to_us:
