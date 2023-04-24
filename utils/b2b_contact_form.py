@@ -78,9 +78,9 @@ def create_b2b_form(authenticator, username, name, config):
     st.markdown("### Autómosást az alábbi űrlap kitöltésével tud leadni. Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
     st.markdown("***")
     
-    st.markdown('### Mosás időpontja, Mosás helyszíne')
-    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét.")
-    st.markdown("Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk ,vagy van még szabad kapacitásunk.")
+    st.markdown('### 1. Mosás időpontja, Mosás helyszíne')
+    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
+  
     col1, col2 = st.columns([2, 2])
     with col1:
         mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja", nyitvatartas_df_nyitva_list)
@@ -100,20 +100,20 @@ def create_b2b_form(authenticator, username, name, config):
         helyszin = st.text_input("Mosás helye (pl. 1111 Budapest, Kossuth Lajos utca 1.)")
 
     
-    st.markdown('### Mosandó autó adatai')
+    st.markdown('### 2. Mosandó autó adatai')
     col1, col2 = st.columns([2, 2])
     with col1:
         number_plate = st.text_input("Rendszám")
         auto_markak_tipusok = st.selectbox("Auto márka tipus", auto_markak_tipusok_list)
     
-    st.markdown('### Milyen típusú mosást szerentne rendelni?')
+    st.markdown('### 3. Milyen típusú mosást szerentne rendelni?')
     col1, col2 = st.columns([2, 2])
     with col1:
         alapszolg = st.radio("Alapszolgáltatás", ("Külső + Belső", "Csak Külső", "Csak Belső"))
     with col2:
         extrak = st.multiselect("Extrák", extrak_df_list)
 
-    st.markdown('### Kapcsolat')
+    st.markdown('### 4. Kapcsolat')
     st.markdown("Kérjük adon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
     col1, col2 = st.columns([2, 2])
     with col1:
@@ -128,14 +128,14 @@ def create_b2b_form(authenticator, username, name, config):
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
     except:
         szamlazasi_infok_default = "Adja meg a számlázási címet"
-    st.markdown('### Számlázási Információk')
+    st.markdown('### 5. Számlázási Információk')
     szamlazasi_info_radio = st.radio("Számlázási információk", (szamlazasi_infok_default, "Egyéb"))
     if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet")):
         szamlazasi_infok = st.text_input("Számlázási Informáciok (Név, Adószám, Irányítomszám, Város, Utca, Házszám)")
     else:
         szamlazasi_infok = szamlazasi_info_radio
 
-    st.markdown('### Megjegyzés')
+    st.markdown('### 6. Megjegyzés')
     st.markdown("Ha van még valami, amit plusszban szeretne közölni velünk, akkor írja be az alábbi mezőbe.")
     megjegyzes = st.text_area("Megjegyzés")
     email_subject = "B2B mosás rendelés érkezett - {}".format(username)
