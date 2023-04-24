@@ -86,7 +86,12 @@ def create_b2b_form(authenticator, username, name, config):
         mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja", nyitvatartas_df_nyitva_list)
 
     try:
-        helyszin_radio = st.radio("Mosás helye", (config['wash_address'], "Egyéb"))
+        helyszin_default = config['credentials']['usernames'][username]['wash_address']
+    except:
+        helyszin_default = "Adja meg a szamlási címet"
+
+    try:
+        helyszin_radio = st.radio("Mosás helye", (helyszin_default, "Egyéb"))
         if helyszin_radio == 'Egyéb':
             helyszin = st.text_input("Mosás helye (pl. 1111 Budapest, Kossuth Lajos utca 1.)")
         else:
