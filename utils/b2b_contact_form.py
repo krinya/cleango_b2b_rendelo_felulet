@@ -79,7 +79,7 @@ def create_b2b_form(authenticator, username, name, config):
     st.markdown("***")
     
     st.markdown('### 1. Mosás időpontja, Mosás helyszíne')
-    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. \n Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
+    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. \n\n Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
   
     col1, col2 = st.columns([2, 2])
     with col1:
