@@ -75,7 +75,8 @@ def create_b2b_form(authenticator, username, name, config):
     with col3:
         authenticator.logout('Logout', 'main')
 
-    st.markdown("### Autómosást az alábbi űrlap kitöltésével tud leadni. Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
+    st.markdown("### Autómosást az alábbi űrlap kitöltésével tud leadni.")
+    st.write("Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
     st.markdown("***")
     
     st.markdown('### 1. Mosás időpontja, Mosás helyszíne')
