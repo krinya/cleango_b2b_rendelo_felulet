@@ -5,6 +5,12 @@ credentials:
       name: Cleango Admin
       password: $2b$12$.qlZXxUvfkBkiuq4cdsyeuzEciMUrJ97.x0CHAxK6zaGtSNqqm.16
       szamlazasi_cim: "Proba cim 134"
+    test:
+      email: test@test.hu
+      name: "test fiók"
+      password: $2b$12$WKjTSlfZDLb53x32Id5uKe279IigTAA0S7mTOqN2cECtyH1L7AEVy
+      wash_address: "setesuta"
+      szamlazasi_cim: "setesuta"
     peri:
       email: peri@peri.hu
       name: "Peri Kft"
