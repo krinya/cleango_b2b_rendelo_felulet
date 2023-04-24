@@ -103,6 +103,11 @@ credentials:
       name: "GEOHIDROTERV Kft."
       szamlazasi_cim: "1089 Budapest, Bíró Lajos utca 51."
       password: $2b$12$GAVO9HtEUhxEVQsLnFyyJeIgtBrHIJI1deju54vfV8U5IUjg.CoU2
+    eisberg:
+      email: eisberg@eisberg.hu
+      name: "Eisberg Kft."
+      szamlazasi_cim: "2360 Gyál, Kisfaludy utca 63."
+      password: $2b$12$SNvZ6DI/ngpegDOKuubD3.iT.fqxEoXdRGb9JloX.iGZipBA0mss.
 
 cookie:
   expiry_days: 0
