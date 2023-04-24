@@ -79,11 +79,11 @@ def create_b2b_form(authenticator, username, name, config):
     st.markdown("***")
     
     st.markdown('### 1. Mosás időpontja, Mosás helyszíne')
-    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
+    st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. \ Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
   
     col1, col2 = st.columns([2, 2])
     with col1:
-        mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja", nyitvatartas_df_nyitva_list)
+        mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja* (kötelező)", nyitvatartas_df_nyitva_list)
 
     try:
         helyszin_default = config['credentials']['usernames'][username]['wash_address']
@@ -91,7 +91,7 @@ def create_b2b_form(authenticator, username, name, config):
         helyszin_default = "Adja meg a mosás helyét!"
 
     try:
-        helyszin_radio = st.radio("Mosás helye", (helyszin_default, "Egyéb"))
+        helyszin_radio = st.radio("Mosás helye* (kötelező)", (helyszin_default, "Egyéb"))
         if (helyszin_radio == 'Egyéb') | (helyszin_radio == "Adja meg a mosás helyét!"):
             helyszin = st.text_input("Mosás helye (pl. 1111 Budapest, Kossuth Lajos utca 1.)")
         else:
@@ -103,26 +103,26 @@ def create_b2b_form(authenticator, username, name, config):
     st.markdown('### 2. Mosandó autó adatai')
     col1, col2 = st.columns([2, 2])
     with col1:
-        number_plate = st.text_input("Rendszám")
-        auto_markak_tipusok = st.selectbox("Auto márka tipus", auto_markak_tipusok_list)
+        number_plate = st.text_input("Rendszám* (kötelező)")
+        auto_markak_tipusok = st.selectbox("Auto márka és típus* (kötelező)", auto_markak_tipusok_list)
     
     st.markdown('### 3. Milyen típusú mosást szerentne rendelni?')
     col1, col2 = st.columns([2, 2])
     with col1:
-        alapszolg = st.radio("Alapszolgáltatás", ("Külső + Belső", "Csak Külső", "Csak Belső"))
+        alapszolg = st.radio("Alapszolgáltatás* (kötelező)", ("Külső + Belső", "Csak Külső", "Csak Belső"))
     with col2:
-        extrak = st.multiselect("Extrák", extrak_df_list)
+        extrak = st.multiselect("Extrák* (kötelező)", extrak_df_list)
 
     st.markdown('### 4. Kapcsolat')
     st.markdown("Kérjük adon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
     col1, col2 = st.columns([2, 2])
     with col1:
-        nev = st.text_input("Név")
+        nev = st.text_input("Név (opcionális)")
     col1, col2 = st.columns([2, 2])
     with col1:
-        email_user = st.text_input("E-mail")
+        email_user = st.text_input("E-mail* (kötelező)")
     with col2:
-        telefon = st.text_input("Telefon")
+        telefon = st.text_input("Telefon (opcionális)")
     # create default szamlazasi infok that is changed based on the username
     try:
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
