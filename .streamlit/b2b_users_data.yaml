@@ -21,6 +21,7 @@ credentials:
       email: chs@chs.hu
       name: "CHS Hungary Kft."
       password: $2b$12$bcLsoH32L4wV8wWdIaiXVecV0M6LMcvYk87q6KGLFktSEo0s7OAMS
+      wash_address: "2040 Budaörs, Vasút utca 15."
       szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
     bonafarm:
       email: bonafarm@bonafarm.hu
