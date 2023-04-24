@@ -79,7 +79,7 @@ def create_b2b_form(authenticator, username, name, config):
     st.write("Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
     st.markdown("***")
     
-    st.markdown('### 1. Mosás időpontja, Mosás helyszíne')
+    st.markdown('### 1. Mosás időpontja és helyszíne')
     st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. \n\n Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
   
     col1, col2 = st.columns([2, 2])
@@ -107,10 +107,10 @@ def create_b2b_form(authenticator, username, name, config):
         number_plate = st.text_input("Rendszám* (kötelező)")
         auto_markak_tipusok = st.selectbox("Auto márka és típus* (kötelező)", auto_markak_tipusok_list)
     
-    st.markdown('### 3. Milyen típusú mosást szerentne rendelni?')
+    st.markdown('### 3. Milyen típusú mosást szeretne rendelni?')
     col1, col2 = st.columns([2, 2])
     with col1:
-        alapszolg = st.radio("Alapszolgáltatás* (kötelező)", ("Külső + Belső", "Csak Külső", "Csak Belső"))
+        alapszolg = st.radio("Alapszolgáltatás* (kötelező)", ("Külső + Belső", "Csak külső", "Csak belső"))
     with col2:
         extrak = st.multiselect("Extrák* (kötelező)", extrak_df_list)
 
@@ -137,7 +137,7 @@ def create_b2b_form(authenticator, username, name, config):
         szamlazasi_infok = szamlazasi_info_radio
 
     st.markdown('### 6. Megjegyzés')
-    st.markdown("Ha van még valami, amit plusszban szeretne közölni velünk, akkor írja be az alábbi mezőbe.")
+    st.markdown("Ha van még valami, amit szeretne közölni velünk, akkor írja be az alábbi mezőbe.")
     megjegyzes = st.text_area("Megjegyzés (opcionális)")
     email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
