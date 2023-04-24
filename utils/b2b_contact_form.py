@@ -71,7 +71,7 @@ def create_b2b_form(authenticator, username, name, config):
 
     col1, col2, col3 = st.columns([6, 1, 1])
     with col1:
-        st.write("{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(name, username))
+        st.write("Kapcsolat: +36301415100 \n\n{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(name, username))
     with col3:
         authenticator.logout('Logout', 'main')
 
@@ -128,8 +128,8 @@ def create_b2b_form(authenticator, username, name, config):
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
     except:
         szamlazasi_infok_default = "Adja meg a számlázási címet"
-    st.markdown('### 5. Számlázási Információk')
-    szamlazasi_info_radio = st.radio("Számlázási információk", (szamlazasi_infok_default, "Egyéb"))
+    st.markdown('### 5. Számlázási információk')
+    szamlazasi_info_radio = st.radio("Számlázási információk* (kötelező)", (szamlazasi_infok_default, "Egyéb"))
     if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet")):
         szamlazasi_infok = st.text_input("Számlázási Informáciok (Név, Adószám, Irányítomszám, Város, Utca, Házszám)")
     else:
@@ -137,7 +137,7 @@ def create_b2b_form(authenticator, username, name, config):
 
     st.markdown('### 6. Megjegyzés')
     st.markdown("Ha van még valami, amit plusszban szeretne közölni velünk, akkor írja be az alábbi mezőbe.")
-    megjegyzes = st.text_area("Megjegyzés")
+    megjegyzes = st.text_area("Megjegyzés (opcionális)")
     email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
     email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfel név: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
