@@ -157,14 +157,14 @@ def create_b2b_form(authenticator, username, name, config):
             for email_adress_to_us in email_list_to_us:
                 try:
                     send_email(email_adress_to_us, email_subject, email_body_to_us)
-                    st.write("Köszönjük a megrendelését, megkaptuk a megrendelését. A megrendelését a lehető leghamarabb feldolgozzuk. A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
+                    
                     # st.write("Megrendelését elküldtük a következő emailcimre: {}!".format(email_adress_to_us))
                 except:
                     st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
-            
+            st.write("Köszönjük a megrendelését, megkaptuk a megrendelését. A megrendelését a lehető leghamarabb feldolgozzuk. A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
             # send the email to the user
             try:
-                send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolas", email_body_to_user)
+                send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
                 st.write(" {}".format(email_user))
             except:
                 st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
