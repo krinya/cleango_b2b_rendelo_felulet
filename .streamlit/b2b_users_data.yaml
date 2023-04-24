@@ -107,6 +107,7 @@ credentials:
       email: eisberg@eisberg.hu
       name: "Eisberg Kft."
       szamlazasi_cim: "2360 Gyál, Kisfaludy utca 63."
+      wash_address: "2360 Gyál, Kisfaludy utca 63."
       password: $2b$12$SNvZ6DI/ngpegDOKuubD3.iT.fqxEoXdRGb9JloX.iGZipBA0mss.
 
 cookie:
