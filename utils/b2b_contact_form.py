@@ -88,11 +88,11 @@ def create_b2b_form(authenticator, username, name, config):
     try:
         helyszin_default = config['credentials']['usernames'][username]['wash_address']
     except:
-        helyszin_default = "Adja meg a szamlási címet"
+        helyszin_default = "Adja meg a mosás helyét!"
 
     try:
         helyszin_radio = st.radio("Mosás helye", (helyszin_default, "Egyéb"))
-        if helyszin_radio == 'Egyéb':
+        if (helyszin_radio == 'Egyéb') | (helyszin_radio == "Adja meg a mosás helyét!"):
             helyszin = st.text_input("Mosás helye (pl. 1111 Budapest, Kossuth Lajos utca 1.)")
         else:
             helyszin = helyszin_radio
