@@ -75,7 +75,7 @@ def create_b2b_form(authenticator, username, name, config):
     with col3:
         authenticator.logout('Logout', 'main')
 
-    st.markdown("### Autómosást az alábbi ürlap kitöltésével tul leadni. Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
+    st.markdown("### Autómosást az alábbi űrlap kitöltésével tud leadni. Adja meg a rendelés adatait, majd kattintson a lap alján található 'Rendelés' gombra.")
     st.markdown("***")
     
     st.markdown('### Mosás időpontja, Mosás helyszíne')
@@ -127,11 +127,11 @@ def create_b2b_form(authenticator, username, name, config):
     try:
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
     except:
-        szamlazasi_infok_default = "Adja meg a szamlási címet"
-    st.markdown('### Számlázasi Információk')
+        szamlazasi_infok_default = "Adja meg a számlázási címet"
+    st.markdown('### Számlázási Információk')
     szamlazasi_info_radio = st.radio("Számlázási információk", (szamlazasi_infok_default, "Egyéb"))
-    if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázasi cimet")):
-        szamlazasi_infok = st.text_input("Számlázasi Informáciok (Név, Adószám, Iranyítomszám, Város, Utca, Házszám)")
+    if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet")):
+        szamlazasi_infok = st.text_input("Számlázási Informáciok (Név, Adószám, Irányítomszám, Város, Utca, Házszám)")
     else:
         szamlazasi_infok = szamlazasi_info_radio
 
@@ -140,7 +140,7 @@ def create_b2b_form(authenticator, username, name, config):
     megjegyzes = st.text_area("Megjegyzés")
     email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
-    email_body_to_us = 'Űj mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfel név: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
+    email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfel név: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
         username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
     email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosando autó: <br> Rendszám: {} <br> Autó Márka és típus: {} <br><br> Mosás helyszin: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
         username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
@@ -156,7 +156,7 @@ def create_b2b_form(authenticator, username, name, config):
             for email_adress_to_us in email_list_to_us:
                 try:
                     send_email(email_adress_to_us, email_subject, email_body_to_us)
-                    st.write("Köszönjük a megrendelését, megkaptuk a megrendelését. A megrendelését a lehető leghamarabb feldolgozzuk. A megrendelésis visszaigazolást az alábbi megadott email címre is elküldtük.")
+                    st.write("Köszönjük a megrendelését, megkaptuk a megrendelését. A megrendelését a lehető leghamarabb feldolgozzuk. A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
                     # st.write("Megrendelését elküldtük a következő emailcimre: {}!".format(email_adress_to_us))
                 except:
                     st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
