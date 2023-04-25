@@ -33,7 +33,7 @@ credentials:
       email: bonafarm@bonafarm.hu
       name: "Bonafarm Zrt."
       wash_address: "1123 Budapest, Alkotás utca 53."
-      szamlazasi_cim: "Bonafarm Zrt. - 1123 Budapest, Alkotás utca 53."
+      szamlazasi_cim: "1123 Budapest, Alkotás utca 53."
       password: $2b$12$/AUD6UY9rv72URTGQfx7RuPZ3dgfYDQAC96ZOqsB0dA1ZBt/bIyzy
     bonitas:
       email: bonitas@bonitas.hu
@@ -110,8 +110,8 @@ credentials:
     lendvai:
       email: lendvai@lendvai.hu
       name: "Lendvai és Társai Ügyvédi Iroda"
-      szamlazasi_cim: "1025 Budapest, PUSZTASZERI ÚT 33/A."
-      wash_address: "1025 Budapest, PUSZTASZERI ÚT 33/A."
+      szamlazasi_cim: "1025 Budapest, Pusztaszeri út 33/A."
+      wash_address: "1025 Budapest, Pusztaszeri út 33/A."
       password: $2b$12$Nl5SiFugE9.m7evrCHLna.WA7Mk/ds6ifMex/aS3FuyJPXM48K1.q
     noispot:
       email: noispot@noispot.hu
