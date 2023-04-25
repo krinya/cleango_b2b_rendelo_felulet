@@ -9,7 +9,7 @@ credentials:
       email: test@test.hu
       name: "test fiók"
       password: $2b$12$WKjTSlfZDLb53x32Id5uKe279IigTAA0S7mTOqN2cECtyH1L7AEVy
-      wash_address: "a cégem fizeti: setesuta"
+      wash_address: "setesuta"
       szamlazasi_cim: "setesuta"
     peri:
       email: peri@peri.hu
