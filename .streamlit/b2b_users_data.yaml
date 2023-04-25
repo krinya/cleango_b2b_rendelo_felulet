@@ -9,14 +9,14 @@ credentials:
       email: test@test.hu
       name: "Test fiók"
       password: $2b$12$WKjTSlfZDLb53x32Id5uKe279IigTAA0S7mTOqN2cECtyH1L7AEVy
-      wash_address: "setesuta"
-      szamlazasi_cim: "setesuta"
+      wash_address: ["setesuta", "Test address"]
+      szamlazasi_cim: ["setesuta_szamlazas", "Test szamlazasi cim"]
     peri:
       email: peri@peri.hu
       name: "Peri Kft"
       password: $2b$12$aO9DBdA3pHGkqh9uUE8yt.8LTO4AlrMBqtCa9YlBa35lZ30yhItpi
-      wash_address: ["1181 Budapest, Zádor utca 9.", "Test address"]
-      szamlazasi_cim: "Peri KFT. -  1181 Budapest, Zádor utca 9."
+      wash_address: "1181 Budapest, Zádor utca 9."
+      szamlazasi_cim: ["Peri KFT. -  1181 Budapest, Zádor utca 9.", "Proba szamlazasi cim"]
     poli:
       email: poli@poli.hu
       name: "Poli Computer PC Kft."

@@ -71,7 +71,7 @@ def create_b2b_form(authenticator, username, name, config):
 
     col1, col2, col3 = st.columns([6, 1, 1])
     with col1:
-        st.write("Kapcsolat: +36301415100 \n\n{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(name, username))
+        st.write("Kapcsolat: +36 30 141 5100 \n\n{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(name, username))
     with col3:
         authenticator.logout('Logout', 'main')
 
@@ -118,6 +118,11 @@ def create_b2b_form(authenticator, username, name, config):
         alapszolg = st.radio("Alapszolgáltatás* (kötelező)", ("Külső + Belső", "Csak külső", "Csak belső"))
     with col2:
         extrak = st.multiselect("Extrák* (kötelező)", extrak_df_list)
+        # ehcek if extrak is greater than 1
+        if len(extrak) > 1:
+            # if extrak contains 'nem kérek extrát' then show warning
+            if 'nem kérek extrát' in extrak:
+                st.warning("Ha nem kért extrát, akkor ne válasszon ki más extrát.")
 
     st.markdown('### 4. Kapcsolat')
     st.markdown("Kérjük adjon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
@@ -132,10 +137,15 @@ def create_b2b_form(authenticator, username, name, config):
     # create default szamlazasi infok that is changed based on the username
     try:
         szamlazasi_infok_default = config['credentials']['usernames'][username]['szamlazasi_cim']
+        # convert szamlazasi_infok_default to a list if it is not a list
+        if type(szamlazasi_infok_default) != list:
+            szamlazasi_infok_default = [szamlazasi_infok_default]
+            # add 'Egyeb' to the end of the list
+            szamlazasi_infok_default.append("Egyéb")
     except:
-        szamlazasi_infok_default = "Adja meg a számlázási címet"
+        szamlazasi_infok_default = ["Adja meg a számlázási címet"]
     st.markdown('### 5. Számlázási információk')
-    szamlazasi_info_radio = st.radio("Számlázási információk* (kötelező)", (szamlazasi_infok_default, "Egyéb"))
+    szamlazasi_info_radio = st.radio("Számlázási információk* (kötelező)", szamlazasi_infok_default)
     if ((szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet")):
         szamlazasi_infok = st.text_input("Számlázási Informáciok (Név, Adószám, Irányítomszám, Város, Utca, Házszám)")
     else:
