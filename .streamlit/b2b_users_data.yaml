@@ -7,7 +7,7 @@ credentials:
       szamlazasi_cim: "Proba cim 134"
     test:
       email: test@test.hu
-      name: "test fiók"
+      name: "Test fiók"
       password: $2b$12$WKjTSlfZDLb53x32Id5uKe279IigTAA0S7mTOqN2cECtyH1L7AEVy
       wash_address: "setesuta"
       szamlazasi_cim: "setesuta"
