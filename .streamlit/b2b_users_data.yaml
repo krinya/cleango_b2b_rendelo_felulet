@@ -16,7 +16,7 @@ credentials:
       name: "Peri Kft"
       password: $2b$12$aO9DBdA3pHGkqh9uUE8yt.8LTO4AlrMBqtCa9YlBa35lZ30yhItpi
       wash_address: "1181 Budapest, Zádor utca 9."
-      szamlazasi_cim: ["Peri KFT. -  1181 Budapest, Zádor utca 9.", "Proba szamlazasi cim"]
+      szamlazasi_cim: ["Peri KFT. -  1181 Budapest, Zádor utca 9."]
     poli:
       email: poli@poli.hu
       name: "Poli Computer PC Kft."
