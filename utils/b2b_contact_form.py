@@ -141,7 +141,7 @@ def create_b2b_form(authenticator, username, name, config):
         if type(szamlazasi_infok_default) != list:
             szamlazasi_infok_default = [szamlazasi_infok_default]
             # add 'Egyeb' to the end of the list
-            szamlazasi_infok_default.append("Egyéb")
+        szamlazasi_infok_default.append("Egyéb")
     except:
         szamlazasi_infok_default = ["Adja meg a számlázási címet"]
     st.markdown('### 5. Számlázási információk')
