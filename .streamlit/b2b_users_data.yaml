@@ -45,7 +45,7 @@ credentials:
       email: gls@gls.hu
       name: "GLS General Logistics Systems Hungary Kft."
       szamlazasi_cim: "2351 Alsónémedi, GLS Európa utca 2."
-       wash_address: "2351 Alsónémedi, GLS Európa utca 2."
+      wash_address: "2351 Alsónémedi, GLS Európa utca 2."
       password: $2b$12$ufKUJj6cOhAHBWfwcUPzLO.X4qZtzLfqTsqf4JX68HWC1xZftTOgG
     jntl:
       email: jntl@jntl.hu
