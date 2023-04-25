@@ -115,7 +115,7 @@ def create_b2b_form(authenticator, username, name, config):
         extrak = st.multiselect("Extrák* (kötelező)", extrak_df_list)
 
     st.markdown('### 4. Kapcsolat')
-    st.markdown("Kérjük adon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
+    st.markdown("Kérjük adjon meg olyan adatokat, amin ha szükséges el tudjuk érni.")
     col1, col2 = st.columns([2, 2])
     with col1:
         nev = st.text_input("Név (opcionális)")
