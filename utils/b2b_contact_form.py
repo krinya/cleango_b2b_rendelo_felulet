@@ -34,7 +34,7 @@ def send_email(recipient_address, subject, body):
     #msg.attach(MIMEText(body, 'plain'))
 
     # create a SMTP client session
-    smtp_server = 'smtp.gmail.com'
+    smtp_server = 'smtp.eu.mailgun.org'
     smtp_port = 587
     smtp_username = st.secrets['email']['smtp_username']
     smtp_password = st.secrets['email']['smtp_password']
