@@ -81,7 +81,7 @@ def create_b2b_form(authenticator, username, name, config):
         col1, col2, col3 = st.columns([6, 1, 1])
 
         st.markdown("### Autómosást az alábbi űrlap kitöltésével tud leadni.")
-        st.write("Adja meg a rendelés adatait, majd kattintson a lap alján található 'Megrnedelés Ellküldése' gombra.")
+        st.write("Adja meg a rendelés adatait, majd kattintson a lap alján található 'Megrendelés Elküldése' gombra.")
         
         st.markdown('### 1. Mosás időpontja és helyszíne')
         st.markdown("Kérjük adja meg a mosás időpontját, valamint a mosás helyszínét. \n\n Mosást csak akkor tudunk fogadni, ha a megadott időpontban nyitva vagyunk, vagy van még szabad kapacitásunk.")
