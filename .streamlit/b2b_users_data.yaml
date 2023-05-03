@@ -79,7 +79,7 @@ credentials:
       password: $2b$12$77wjDwTkyaI0esBsHvjLj.DTUp1nDHWoDvy79DP52TepvR58t5SBq
     goldbeck:
       email: goldbeck@goldbeck.hu
-      name: "Goldbeck Kft."
+      name: "GOLDBECK Hungária Kft."
       szamlazasi_cim: "1124 Budapest, Bürök utca 34-36"
       wash_address: "1124 Budapest, Bürök utca 34-36"
       password: $2b$12$CcLJtMl4L4LzMTA5dwpl5.qUzdvmgVAeGy6DPwm1q.T.nK8I442ny
