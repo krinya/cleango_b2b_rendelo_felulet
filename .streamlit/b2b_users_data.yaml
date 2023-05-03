@@ -33,7 +33,7 @@ credentials:
       email: bonafarm@bonafarm.hu
       name: "Bonafarm Zrt."
       wash_address: "1123 Budapest, Alkotás utca 53."
-      szamlazasi_cim: "1123 Budapest, Alkotás utca 53."
+      szamlazasi_cim: "Bonafarm Zrt. - 1123 Budapest, Alkotás utca 53."
       password: $2b$12$/AUD6UY9rv72URTGQfx7RuPZ3dgfYDQAC96ZOqsB0dA1ZBt/bIyzy
     bonitas:
       email: bonitas@bonitas.hu
@@ -44,7 +44,7 @@ credentials:
     gls:
       email: gls@gls.hu
       name: "GLS General Logistics Systems Hungary Kft."
-      szamlazasi_cim: "2351 Alsónémedi, GLS Európa utca 2."
+      szamlazasi_cim: "GLS General Logistics Systems Hungary Kft. - 2351 Alsónémedi, GLS Európa utca 2."
       wash_address: "2351 Alsónémedi, GLS Európa utca 2."
       password: $2b$12$ufKUJj6cOhAHBWfwcUPzLO.X4qZtzLfqTsqf4JX68HWC1xZftTOgG
     jntl:
@@ -56,13 +56,13 @@ credentials:
     OAH:
       email: oah@oah.hu
       name: "Országos Atomenergiai Hivatal "
-      szamlazasi_cim: "1036 Budapest, Fényes Adolf utca 4."
+      szamlazasi_cim: "Országos Atomenergiai Hivatal - 1036 Budapest, Fényes Adolf utca 4."
       wash_address: "1036 Budapest, Fényes Adolf utca 4."
       password: $2b$12$xX7SaJfeR4stf73/cyJvm.MuI8auWoKpENDP43zTLXVGPetHC/K0.
     hedo:
       email: hedo@hedo.hu
       name: "HE-DO Kft."
-      szamlazasi_cim: "1133 Budapest, Váci út 76."
+      szamlazasi_cim: "HE-DO Kft. - 1133 Budapest, Váci út 76."
       wash_address: "1133 Budapest, Váci út 76."
       password: $2b$12$zd0M2GgciAjhkWFusSAftuOKATbBAgYIN0/sxegcUdbZzFDdn5Yvm
     RSOE:
@@ -74,7 +74,7 @@ credentials:
     rikvest:
       email: rikvest@rivkest.hu
       name: "Rikvest Kft."
-      szamlazasi_cim: "1148 Budapest, Nagy Lajos király útja 24."
+      szamlazasi_cim: "Rikvest Kft. - 1148 Budapest, Nagy Lajos király útja 24."
       wash_address: "1148 Budapest, Nagy Lajos király útja 24."
       password: $2b$12$77wjDwTkyaI0esBsHvjLj.DTUp1nDHWoDvy79DP52TepvR58t5SBq
     goldbeck:
@@ -86,49 +86,49 @@ credentials:
     mucsy:
       email: mucsy@mucsy.hu
       name: "Mucsy Ügyvédi Iroda"
-      szamlazasi_cim: "1022 Budapest, Ribáry utca 7."
+      szamlazasi_cim: "Mucsy Ügyvédi Iroda - 1022 Budapest, Ribáry utca 7."
       wash_address: "1022 Budapest, Ribáry utca 7."
       password: $2b$12$dqJgC2rmCFiLn1OlTBOtW.ApPQ7mOJV3.QdD51u2/nLjKIIuGXBNm
     obudai_vagyonkezelo:
       email: obudai_vagyonkezelo@obudai_vagyonkezelo.hu
       name: "Óbudai Vagyonkezelő Nonprofit Zrt."
-      szamlazasi_cim: "1033 Budapest, Mozaik utca 7."
+      szamlazasi_cim: "Óbudai Vagyonkezelő Nonprofit Zrt. - 1033 Budapest, Mozaik utca 7."
       wash_address: "1033 Budapest, Mozaik utca 7."
       password: $2b$12$YZ/zEr9v1pjM2zlE3yi7yeIfr9HhDo4lCzMRmi/gN05n9cZ6Y6kj2
     berlin_chemie:
       email: berlin_chemie@berlin_chemie.hu
       name: "Berlin Chemie/A. Menarini Kft."
-      szamlazasi_cim: "1087 Budapest, Hungária körút 30/A 8. emelet"
+      szamlazasi_cim: "Berlin Chemie/A. Menarini Kft. - 1087 Budapest, Hungária körút 30/A 8. emelet"
       wash_address: "1087 Budapest, Hungária körút 30/A 8. emelet"
       password: $2b$12$MuGRbdKT3fnJQ.pw7L3toO6YWKMv3KfetaCqKr8XSLAwGhhjRb2Pi
     elegant_design:
       email: elegant_desgin@elegant_desgin.hu
       name: "Elegant Design Zrt."
-      szamlazasi_cim: "1089 Budapest, VIII., Elnök utca 1. 2. emelet"
+      szamlazasi_cim: "Elegant Design Zrt. - 1089 Budapest, VIII., Elnök utca 1. 2. emelet"
       wash_address: "1089 Budapest, VIII., Elnök utca 1. 2. emelet"
       password: $2b$12$5yt5hsBWbM1sPbIFd9z0JudFbLBv8ICqatAJ4KUsW5VsDEHQkmwqi
     lendvai:
       email: lendvai@lendvai.hu
       name: "Lendvai és Társai Ügyvédi Iroda"
-      szamlazasi_cim: "1025 Budapest, Pusztaszeri út 33/A."
+      szamlazasi_cim: "Lendvai és Társai Ügyvédi Iroda - 1025 Budapest, Pusztaszeri út 33/A."
       wash_address: "1025 Budapest, Pusztaszeri út 33/A."
       password: $2b$12$Nl5SiFugE9.m7evrCHLna.WA7Mk/ds6ifMex/aS3FuyJPXM48K1.q
     noispot:
       email: noispot@noispot.hu
       name: "Noispot Innovations Kft."
-      szamlazasi_cim: "6722 Szeged, Boldogasszony sugárút 21. 1. em."
+      szamlazasi_cim: "Noispot Innovations Kft. - 6722 Szeged, Boldogasszony sugárút 21. 1. em."
       wash_address: "1093 Budapest, Ráday utca 58."
       password: $2b$12$I6QfISr7uck0C20mU07oXuRBtF/DpYoOsBKCCRrcbYPoPJEsImYjK
     geohidroterv:
       email: geohidroterv@geohidroterv.hu
       name: "GEOHIDROTERV Kft."
-      szamlazasi_cim: "1089 Budapest, Bíró Lajos utca 51."
+      szamlazasi_cim: "GEOHIDROTERV Kft. - 1089 Budapest, Bíró Lajos utca 51."
       wash_address: "1089 Budapest, Bíró Lajos utca 51."
       password: $2b$12$GAVO9HtEUhxEVQsLnFyyJeIgtBrHIJI1deju54vfV8U5IUjg.CoU2
     eisberg:
       email: eisberg@eisberg.hu
       name: "Eisberg Kft."
-      szamlazasi_cim: "2360 Gyál, Kisfaludy utca 63."
+      szamlazasi_cim: "Eisberg Kft. - 2360 Gyál, Kisfaludy utca 63."
       wash_address: "2360 Gyál, Kisfaludy utca 63."
       password: $2b$12$SNvZ6DI/ngpegDOKuubD3.iT.fqxEoXdRGb9JloX.iGZipBA0mss.
 
