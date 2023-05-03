@@ -70,13 +70,13 @@ credentials:
       name: "Rádiós Segélyhívó és Infokommunikációs Országos Egyesület"
       szamlazasi_cim: "1089 Budapest, ELNÖK UTCA 1."
       wash_address: "1089 Budapest, ELNÖK UTCA 1."
-      password: $2b$12$Z9Mpn.2FvZ0en5e.MNrovOpyIp8ZZTHLQV2oj00VbEUVT8.hmdSFK
+      password: $2b$12$LaL7s4o2gdHHV0XQbB4UZ.vSLFIOHzllqKNbYmOjd9P.8rMSx6WD.
     rikvest:
       email: rikvest@rivkest.hu
       name: "Rikvest Kft."
       szamlazasi_cim: "1148 Budapest, Nagy Lajos király útja 24."
       wash_address: "1148 Budapest, Nagy Lajos király útja 24."
-      password: $2b$12$1Pkn1CwQ22m56pdK9dJdBuzmEJw5bDEgkZ1uTzLUBMmUE/VVkUBIO
+      password: $2b$12$77wjDwTkyaI0esBsHvjLj.DTUp1nDHWoDvy79DP52TepvR58t5SBq
     goldbeck:
       email: goldbeck@goldbeck.hu
       name: "Goldbeck Kft."
