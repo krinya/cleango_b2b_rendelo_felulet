@@ -45,7 +45,7 @@ def send_email(recipient_address, subject, body):
 
 def create_b2b_form(authenticator, username, name, config):
 
-    email_list_to_us = ["info@cleango.hu", "karoly.szabo@cleango.hu"] #ez az email cimre fogja elkuldeni a rendeles adatait
+    email_list_to_us = ["info@cleango.hu"] #ez az email cimre fogja elkuldeni a rendeles adatait
 
     # nyitvatartas
     #nyitvatartas_df = pd.read_csv('data/cleango_b2b_nyitvatartas - adatok.csv')
