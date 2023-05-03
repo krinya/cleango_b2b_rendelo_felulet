@@ -137,5 +137,5 @@ cookie:
   key: random_signature_key_abc # Must be string
   name: random_cookie_name
 preauthorized:
-  emails:
-  - random@gmailproba.com
+#  emails:
+#  - random@gmailproba.com
