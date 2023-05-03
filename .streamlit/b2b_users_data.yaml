@@ -94,7 +94,7 @@ credentials:
       name: "Óbudai Vagyonkezelő Nonprofit Zrt."
       szamlazasi_cim: "1033 Budapest, Mozaik utca 7."
       wash_address: "1033 Budapest, Mozaik utca 7."
-      password: $2b$12$LDZocc04HZzhxRX8Ll4OJe3oUoJrL0My2Ky09P.kGmGLuoiBJYzOq
+      password: $2b$12$YZ/zEr9v1pjM2zlE3yi7yeIfr9HhDo4lCzMRmi/gN05n9cZ6Y6kj2
     berlin_chemie:
       email: berlin_chemie@berlin_chemie.hu
       name: "Berlin Chemie/A. Menarini Kft."
