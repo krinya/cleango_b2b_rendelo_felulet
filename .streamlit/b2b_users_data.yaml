@@ -137,6 +137,12 @@ credentials:
       szamlazasi_cim: "Fizetési Pont Kft. - 1026 Budapest, Pasaréti út 83."
       wash_address: "1026 Budapest, Pasaréti út 83."
       password: $2b$12$DdbPHy7n.k7rYwM5zJj25OW0iY0bPtkv8eC65P.tFvkKyppftCpqO
+    flottauto:
+      email: flotta@flotta.hu
+      name: "FLOTTAUTO Lízing Kft."
+      szamlazasi_cim: "FLOTTAUTO Lízing Kft. - Thallóczy Lajos utca 25/B. fszt. 4."
+      wash_address: "Thallóczy Lajos utca 25/B. fszt. 4."
+      password: $2b$12$4CnE7ClyTHpGiuilbAuE/OYJ7fJYYx3WeOxhD8ZL8k7ORd000Y8.6
 
 cookie:
   expiry_days: 0
