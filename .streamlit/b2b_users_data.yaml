@@ -100,7 +100,7 @@ credentials:
       name: "Berlin Chemie/A. Menarini Kft."
       szamlazasi_cim: "Berlin Chemie/A. Menarini Kft. - 1087 Budapest, Hungária körút 30/A 8. emelet"
       wash_address: "1087 Budapest, Hungária körút 30/A 8. emelet"
-      password: $2b$12$MuGRbdKT3fnJQ.pw7L3toO6YWKMv3KfetaCqKr8XSLAwGhhjRb2Pi
+      password: $2b$12$HfBLtRQiy551cgIxDKulLOJxLsZ3vocIppgN6DQqxj.vyo60YBB8i
     elegant_design:
       email: elegant_desgin@elegant_desgin.hu
       name: "Elegant Design Zrt."
