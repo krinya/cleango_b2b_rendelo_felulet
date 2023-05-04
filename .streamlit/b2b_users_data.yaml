@@ -131,6 +131,12 @@ credentials:
       szamlazasi_cim: "Eisberg Kft. - 2360 Gyál, Kisfaludy utca 63."
       wash_address: "2360 Gyál, Kisfaludy utca 63."
       password: $2b$12$SNvZ6DI/ngpegDOKuubD3.iT.fqxEoXdRGb9JloX.iGZipBA0mss.
+    fizetesipont:
+      email: fizpont@fizpont.hu
+      name: "Fizetési Pont Kft."
+      szamlazasi_cim: "Fizetési Pont Kft. - 1026 Budapest, Pasaréti út 83."
+      wash_address: "1026 Budapest, Pasaréti út 83."
+      password: $2b$12$DdbPHy7n.k7rYwM5zJj25OW0iY0bPtkv8eC65P.tFvkKyppftCpqO
 
 cookie:
   expiry_days: 0
