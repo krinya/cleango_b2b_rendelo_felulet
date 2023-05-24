@@ -45,6 +45,13 @@ def send_email(recipient_address, subject, body):
         smtp.login(smtp_username, smtp_password)
         smtp.send_message(msg)
 
+def session_counter():
+    # st.sesson counter intialization
+    if 'session_counter' not in st.session_state:
+        st.session_state.session_counter = 1
+    st.session_state.session_counter = 1
+    return st.session_state.session_counter
+
 def create_b2b_form(authenticator, username, name, config):
 
     email_list_to_us = ["info@cleango.hu"] #ez az email cimre fogja elkuldeni a rendeles adatait
@@ -76,7 +83,6 @@ def create_b2b_form(authenticator, username, name, config):
     with col3:
         authenticator.logout('Logout', 'main')
 
-    subbmited = False
     with st.form(key='b2b_form'):
 
         col1, col2, col3 = st.columns([6, 1, 1])
@@ -160,7 +166,7 @@ def create_b2b_form(authenticator, username, name, config):
         megjegyzes = st.text_area("Megjegyzés (opcionális)")
         email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
-        submitted = st.form_submit_button("Megrendelés elküldése")
+        submitted = st.form_submit_button("Megrendelés elküldése", on_click=session_counter)
 
         col1, col2 = st.columns([2, 2])
 
@@ -173,10 +179,13 @@ def create_b2b_form(authenticator, username, name, config):
             st.write("Email: info@cleango.hu")
             st.write("Telefon: +36 30 141 5100")
 
-        with col1:
-
-            if submitted:
-
+        if submitted:
+            print("submitted")
+        if 'session_counter' not in st.session_state:
+            st.session_state.session_counter = 0
+        if st.session_state.session_counter == 1:
+            st.session_state.session_counter = 0
+            with col1:
                 # some checks
                 error_counter = 0
 
