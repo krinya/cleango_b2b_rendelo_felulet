@@ -165,77 +165,83 @@ def create_b2b_form(authenticator, username, name, config):
 
     with col1:
 
+        st.markdown("Nyomja meg a gombot, hogy a megrendelését elküldje nekünk.")
+        st.markdown("Ha megnyomja a gombot, és nem lát semmilyen egyéb üzenetet, ez alatt a mondat alatt, akkor nyomja meg a gombot újra.")
+    with col2:
+        st.write("Ha valami kérdése van, kérjük keressen minket bizalommal a következő elérhetőségeken:")
+        st.write("Email: info@cleango.hu")
+        st.write("Telefon: +36 30 141 5100")
+
+    with col1:
+
         if submitted:
 
             # some checks
+            error_counter = 0
 
             if (szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet"):
                 szamlazasi_infok = szamlazasi_info_text
                 if len(szamlazasi_infok) < 3:
                     st.warning("Kérjük adja meg a számlázási információkat!")
-                    st.stop()
+                    error_counter += 1
 
             if len(number_plate) < 1:
                 st.warning("Kérjük adja meg a rendszámot!")
-                st.stop()
+                error_counter += 1
             
             if len(auto_markak_tipusok) < 1:
                 st.warning("Kérjük adja meg az autó márkáját és típusát!")
-                st.stop()
+                error_counter += 1
 
             if (helyszin_radio == 'Egyéb') | (helyszin_default == "Adja meg a mosás helyét!"):
                 helyszin = helyszin_text
                 if len(helyszin) < 3:
                     st.warning("Kérjük adja meg a mosás helyét!")
-                    st.stop()
+                    error_counter += 1
             
             # chech email_user must contain @ and .
             if email_user.find("@") == -1:
                 st.warning("Kérjük adjon meg egy valós e-mail címet!")
-                st.stop()
+                error_counter += 1
 
             # chech email_user must contain @ and .
             if email_user.find(".") == -1:
                 st.warning("Kérjük adjon meg egy valós e-mail címet!")
-                st.stop()
+                error_counter += 1
 
             # ehcek if extrak is greater than 1
             if len(extrak) > 1:
                 # if extrak contains 'nem kérek extrát' then show warning
                 if 'nem kérek extrát' in extrak:
                     st.warning("Ha nem kért extrát, akkor ne válasszon ki más extrát.")
-                    st.stop()
+                    error_counter += 1
             
             if len(extrak) < 1:
                 st.warning("Kérjük válasszon ki legalább egy extrát, vagy valassza ki hogy nem kér extrát!")
-                st.stop()
+                error_counter += 1
 
+            if error_counter == 0:
 
-            email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfél név: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
-                username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
-            email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br>Ez egy automatikusan generált email, kérjük ne válaszoljon rá!<br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br><br><br> Ha a autómosását le szeretné mondani vagy másik időpontra foglalná át kérem vegye fel a kapcsolatot velünk emailben: info@cleango.hu vagy telefonon: +36301415100 <br><br>'.format(
-                username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
+                email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfél név: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
+                    username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
+                email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br>Ez egy automatikusan generált email, kérjük ne válaszoljon rá!<br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br><br><br> Ha a autómosását le szeretné mondani vagy másik időpontra foglalná át kérem vegye fel a kapcsolatot velünk emailben: info@cleango.hu vagy telefonon: +36301415100 <br><br>'.format(
+                    username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
 
-                
-            # send the email to CleanGo
-            for email_adress_to_us in email_list_to_us:
+                    
+                # send the email to CleanGo
+                for email_adress_to_us in email_list_to_us:
+                    try:
+                        send_email(email_adress_to_us, email_subject, email_body_to_us)
+                        st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
+                    except:
+                        st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
+                    
+                # send the email to the user
                 try:
-                    send_email(email_adress_to_us, email_subject, email_body_to_us)
-                    st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
+                    send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
+                    st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
+                    st.write(" {}".format(email_user))
+                    st.write("Kérjük ellenőrizze a spam mappát is!")
                 except:
-                    st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
-                
-            # send the email to the user
-            try:
-                send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
-                st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
-                st.write(" {}".format(email_user))
-                st.write("Kérjük ellenőrizze a spam mappát is!")
-            except:
-                st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
-                st.write("{}".format(email_user))
-        
-    with col2:
-        st.write("Ha valami kérdése van, kérjük keressen minket bizalommal a következő elérhetőségeken:")
-        st.write("Email: info@cleango.hu")
-        st.write("Telefon: +36 30 141 5100")
+                    st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
+                    st.write("{}".format(email_user))
