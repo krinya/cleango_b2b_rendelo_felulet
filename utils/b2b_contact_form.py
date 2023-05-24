@@ -221,20 +221,21 @@ def create_b2b_form(authenticator, username, name, config):
             for email_adress_to_us in email_list_to_us:
                 try:
                     send_email(email_adress_to_us, email_subject, email_body_to_us)
-                        
-                        # st.write("Megrendelését elküldtük a következő emailcimre: {}!".format(email_adress_to_us))
+                    st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
                 except:
-                    st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk fogadni!")
+                    st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
                 
-                # send the email to the user
+            # send the email to the user
             try:
                 send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
-                st.write("Köszönjük a megrendelését, megkaptuk a megrendelését. A megrendelését a lehető leghamarabb feldolgozzuk. A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
+                st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
                 st.write(" {}".format(email_user))
+                st.write("Kérjük ellenőrizze a spam mappát is!")
             except:
-                st.write("Hoppá valami hiba történt. A megrendelését nem tudtuk elküldeni!")
+                st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
+                st.write("{}".format(email_user))
         
     with col2:
-        st.write("Ha valami kérdése van, kérjük keressen minket a következő elérhetőségeken:")
+        st.write("Ha valami kérdése van, kérjük keressen minket bizalommal a következő elérhetőségeken:")
         st.write("Email: info@cleango.hu")
         st.write("Telefon: +36 30 141 5100")
