@@ -155,6 +155,12 @@ credentials:
       szamlazasi_cim: "Rentseven Kft. - 1143 Budapest, Gizella út 42-44."
       wash_address: "1143 Budapest, Gizella út 42-44."
       password: "$2b$12$QAjr8WvzilUjXy/Pd8a39uet6uFhdR9PsbmEQW0OjYIei.dyUcnRy"
+    bastion:
+      email: br@br.hu
+      name: "Bastion Residence"
+      szamlazasi_cim: "---"
+      wash_address: "1011 Budapest, Szalag utca 22."
+      password: "$2b$12$EmTdVYiI3wzwHF26bWwVbOk/EI/aJmjCotOyfJAfcZTu21ikUjHu2"
 
 cookie:
   expiry_days: 0
