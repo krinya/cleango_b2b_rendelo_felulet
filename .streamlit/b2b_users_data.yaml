@@ -143,6 +143,24 @@ credentials:
       szamlazasi_cim: "FLOTTAUTO Lízing Kft. - Thallóczy Lajos utca 25/B. fszt. 4."
       wash_address: "Thallóczy Lajos utca 25/B. fszt. 4."
       password: $2b$12$4CnE7ClyTHpGiuilbAuE/OYJ7fJYYx3WeOxhD8ZL8k7ORd000Y8.6
+    hellenergy:
+      email: hell@hell.hu
+      name: "HELL ENERGY Magyarország Kft."
+      szamlazasi_cim: "HELL ENERGY Magyarország Kft. - 1062 Budapest, Andrássy út 126."
+      wash_address: "1062 Budapest, Andrássy út 126."
+      password: "$2b$12$y7y0CORbaI/KghLpXx2pKeKwi.HpcOE8U69eX.CaYogzO/9omS7fy"
+    rentseven:
+      email: rs@rs.hu
+      name: "Rentseven Kft."
+      szamlazasi_cim: "Rentseven Kft. - 1143 Budapest, Gizella út 42-44."
+      wash_address: "1143 Budapest, Gizella út 42-44."
+      password: "$2b$12$QAjr8WvzilUjXy/Pd8a39uet6uFhdR9PsbmEQW0OjYIei.dyUcnRy"
+    bastion:
+      email: br@br.hu
+      name: "Bastion Residence"
+      szamlazasi_cim: "---"
+      wash_address: "1011 Budapest, Szalag utca 22."
+      password: "$2b$12$EmTdVYiI3wzwHF26bWwVbOk/EI/aJmjCotOyfJAfcZTu21ikUjHu2"
 
 cookie:
   expiry_days: 0
