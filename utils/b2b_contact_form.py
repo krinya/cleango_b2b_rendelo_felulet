@@ -181,77 +181,108 @@ def create_b2b_form(authenticator, username, name, config):
 
         if submitted:
             print("submitted")
-        if 'session_counter' not in st.session_state:
-            st.session_state.session_counter = 0
         if st.session_state.session_counter == 1:
-            st.session_state.session_counter = 0
-            with col1:
-                # some checks
-                error_counter = 0
+            with st.spinner("Megrendelés elküldése folyamatban..."):
+                st.session_state.session_counter = 0
+                with col1:
+                    # some checks
+                    error_counter = 0
 
-                if (szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet"):
-                    szamlazasi_infok = szamlazasi_info_text
-                    if len(szamlazasi_infok) < 3:
-                        st.warning("Kérjük adja meg a számlázási információkat!")
+                    if (szamlazasi_info_radio == "Egyéb") or (szamlazasi_info_radio == "Add meg a számlázási cimet"):
+                        szamlazasi_infok = szamlazasi_info_text
+                        if len(szamlazasi_infok) < 3:
+                            st.warning("Kérjük adja meg a számlázási információkat!")
+                            error_counter += 1
+
+                    if len(number_plate) < 1:
+                        st.warning("Kérjük adja meg a rendszámot!")
+                        error_counter += 1
+                    
+                    if len(auto_markak_tipusok) < 1:
+                        st.warning("Kérjük adja meg az autó márkáját és típusát!")
                         error_counter += 1
 
-                if len(number_plate) < 1:
-                    st.warning("Kérjük adja meg a rendszámot!")
-                    error_counter += 1
-                
-                if len(auto_markak_tipusok) < 1:
-                    st.warning("Kérjük adja meg az autó márkáját és típusát!")
-                    error_counter += 1
-
-                if (helyszin_radio == 'Egyéb') | (helyszin_default == "Adja meg a mosás helyét!"):
-                    helyszin = helyszin_text
-                    if len(helyszin) < 3:
-                        st.warning("Kérjük adja meg a mosás helyét!")
+                    if (helyszin_radio == 'Egyéb') | (helyszin_default == "Adja meg a mosás helyét!"):
+                        helyszin = helyszin_text
+                        if len(helyszin) < 3:
+                            st.warning("Kérjük adja meg a mosás helyét!")
+                            error_counter += 1
+                    
+                    # chech email_user must contain @ and .
+                    if email_user.find("@") == -1:
+                        st.warning("Kérjük adjon meg egy valós e-mail címet!")
                         error_counter += 1
-                
-                # chech email_user must contain @ and .
-                if email_user.find("@") == -1:
-                    st.warning("Kérjük adjon meg egy valós e-mail címet!")
-                    error_counter += 1
 
-                # chech email_user must contain @ and .
-                if email_user.find(".") == -1:
-                    st.warning("Kérjük adjon meg egy valós e-mail címet!")
-                    error_counter += 1
-
-                # ehcek if extrak is greater than 1
-                if len(extrak) > 1:
-                    # if extrak contains 'nem kérek extrát' then show warning
-                    if 'nem kérek extrát' in extrak:
-                        st.warning("Ha nem kért extrát, akkor ne válasszon ki más extrát.")
+                    # chech email_user must contain @ and .
+                    if email_user.find(".") == -1:
+                        st.warning("Kérjük adjon meg egy valós e-mail címet!")
                         error_counter += 1
-                
-                if len(extrak) < 1:
-                    st.warning("Kérjük válasszon ki legalább egy extrát, vagy valassza ki hogy nem kér extrát!")
-                    error_counter += 1
 
-                if error_counter == 0:
+                    # ehcek if extrak is greater than 1
+                    if len(extrak) > 1:
+                        # if extrak contains 'nem kérek extrát' then show warning
+                        if 'nem kérek extrát' in extrak:
+                            st.warning("Ha nem kért extrát, akkor ne válasszon ki más extrát.")
+                            error_counter += 1
+                    
+                    if len(extrak) < 1:
+                        st.warning("Kérjük válasszon ki legalább egy extrát, vagy valassza ki hogy nem kér extrát!")
+                        error_counter += 1
 
-                    email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfél név: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
-                        username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
-                    email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br>Ez egy automatikusan generált email, kérjük ne válaszoljon rá!<br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br><br><br> Ha a autómosását le szeretné mondani vagy másik időpontra foglalná át kérem vegye fel a kapcsolatot velünk emailben: info@cleango.hu vagy telefonon: +36301415100 <br><br>'.format(
-                        username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
+                    if error_counter == 0:
 
-                        
-                    # send the email to CleanGo
-                    for email_adress_to_us in email_list_to_us:
+                        answer_dict = {
+                            "username": username,
+                            "email_user": email_user,
+                            "number_plate": number_plate,
+                            "auto_markak_tipusok": auto_markak_tipusok,
+                            "helyszin": helyszin,
+                            "mosas_datum_ido": mosas_datum_ido,
+                            "alapszolg": alapszolg,
+                            "extrak": extrak,
+                            "nev": nev,
+                            "szamlazasi_infok": szamlazasi_infok,
+                            "megjegyzes": megjegyzes
+                        }
+
+                        answer_dict_str = str(answer_dict)
+
+                        email_body_to_us = 'Új mosás rendelés érkezett a B2B rendszerén keresztül!</p> <br><br> Ügyfél név: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br>'.format(
+                            username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
+                        email_body_to_user = 'Köszönjük megrendelését a CleanGo - B2B rendszerén keresztül! Rendelését megkaptuk.</p> <br><br>Ez egy automatikusan generált email, kérjük ne válaszoljon rá!<br><br> Mergrendelő felhasználó neve: <br> {} <br><br> Mosandó autó: <br> Rendszám: {} <br> Autómárka és típus: {} <br><br> Mosás helyszín: <br> {} <br> Mosás időpontja: {} <br><br> Milyen mosást szerente rendelni? <br> {}, <br> Extrák: <br> {} <br><br>Kapcsolat: <br> {} <br> {}, {} <br><br> Számlázási információk: <br> {} <br><br> Megjegyzés: <br> {} <br><br><br> Ha a autómosását le szeretné mondani vagy másik időpontra foglalná át kérem vegye fel a kapcsolatot velünk emailben: info@cleango.hu vagy telefonon: +36301415100 <br><br>'.format(
+                            username, number_plate, auto_markak_tipusok, helyszin, mosas_datum_ido, alapszolg, extrak, nev, email_user, telefon, szamlazasi_infok, megjegyzes)
+
+                        conn = create_connection()
+                        cursor = conn.cursor()
+                        # I have these columns in the table: id, name, email, telephone_number, dob, questions, created_at, updated_at.
+                        # The id and the created_at and updated_at columns are automatically filled by the database.
+                        insert_query = """INSERT INTO cleango.bi_b2b_orders_registration (username, nev, email_user, mosas_datum_ido, answer_text) VALUES  ('{}', '{}', '{}', '{}', '{}')""".format(
+                            username,
+                            nev,
+                            email_user,
+                            mosas_datum_ido,
+                            answer_dict_str.replace("'", "''")
+                        )
+                        cursor.execute(insert_query)
+                        # Commit the changes and close the cursor and the database connection
+                        conn.commit()
+                        cursor.close()
+                        conn.close()
+                            
+                        # send the email to CleanGo
+                        for email_adress_to_us in email_list_to_us:
+                            try:
+                                send_email(email_adress_to_us, email_subject, email_body_to_us)
+                                st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
+                            except:
+                                st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
+                            
+                        # send the email to the user
                         try:
-                            send_email(email_adress_to_us, email_subject, email_body_to_us)
-                            st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
+                            send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
+                            st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
+                            st.write(" {}".format(email_user))
+                            st.write("Kérjük ellenőrizze a spam mappát is!")
                         except:
-                            st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
-                        
-                    # send the email to the user
-                    try:
-                        send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
-                        st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
-                        st.write(" {}".format(email_user))
-                        st.write("Kérjük ellenőrizze a spam mappát is!")
-                    except:
-                        st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
-                        st.write("{}".format(email_user))
+                            st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
+                            st.write("{}".format(email_user))
