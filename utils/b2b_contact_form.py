@@ -230,6 +230,8 @@ def create_b2b_form(authenticator, username, name, config):
                         error_counter += 1
 
                     if error_counter == 0:
+ 
+                        megjegyzes = megjegyzes.replace('\n', '')
 
                         answer_dict = {
                             "username": username,
