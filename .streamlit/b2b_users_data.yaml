@@ -161,6 +161,12 @@ credentials:
       password: "$2b$12$qJrhawCoT5tLWvZaBC2TFO6rAmtOonPId5DNFIhqxvEKf6X.Vy85q"
       wash_address: "2040 Budaörs, Vasút utca 15."
       szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
+    visual_europe_group:
+      email: veg@veg.hu
+      name: "Visual Europe Group"
+      password: "$2b$12$/FRFVH0dUBwzW9DQyb2n9ulnx89TKhkEsqUJVPy7qHowi.rfg523W"
+      wash_address: "1044 Budapest, Óradna u. 11."
+      szamlazasi_cim: "Visual Europe Group - 1044 Budapest, Óradna u. 11."
 
 
 cookie:
