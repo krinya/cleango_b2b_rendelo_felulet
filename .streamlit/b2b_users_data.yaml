@@ -23,12 +23,6 @@ credentials:
       password: $2b$12$1MiV/KnZZ8by3a2iwEdS/uIyi4AdqLxo.pnYifGqg75gauH2ZVWOq
       wash_address: "1082 Budapest, Ciprus utca 2-8."
       szamlazasi_cim: "Poli Computer PC Kft. -  1037 Budapest, Montevideo utca 8."
-    chs:
-      email: chs@chs.hu
-      name: "CHS Hungary Kft."
-      password: $2b$12$bcLsoH32L4wV8wWdIaiXVecV0M6LMcvYk87q6KGLFktSEo0s7OAMS
-      wash_address: "2040 Budaörs, Vasút utca 15."
-      szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
     bonafarm:
       email: bonafarm@bonafarm.hu
       name: "Bonafarm Zrt."
