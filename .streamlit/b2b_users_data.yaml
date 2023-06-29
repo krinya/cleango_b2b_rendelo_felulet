@@ -167,7 +167,7 @@ credentials:
       password: "$2b$12$/FRFVH0dUBwzW9DQyb2n9ulnx89TKhkEsqUJVPy7qHowi.rfg523W"
       wash_address: "1044 Budapest, Óradna u. 11."
       szamlazasi_cim: "Visual Europe Group - 1044 Budapest, Óradna u. 11."
-   civil:
+    civil:
       email: cc@cc.hu
       name: "Civil Cégcsoport"
       password: "$2b$12$gFqHKVHNEreycp1aOQUTo.xnLzsFtRVauT.1scAF.8BzqNghwlovS"
