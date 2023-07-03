@@ -63,8 +63,14 @@ def create_b2b_form(authenticator, username, name, config):
     # Construct the URL for the sheet's CSV export
     csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
     nyitvatartas_df = pd.read_csv(csv_url)
+    # crete a date_time column from date and time columns
+    nyitvatartas_df['date_time_2'] = nyitvatartas_df['date'] + ' ' + nyitvatartas_df['time']
+    # convert date_time column to datetime
+    nyitvatartas_df['date_time_2'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format='%Y-%m-%d %H')
     # filter for dates that is higher than today
-    nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date'] >= datetime.now().strftime('%Y-%m-%d')]
+    st.dataframe(nyitvatartas_df)
+    nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_2'] >= datetime.now()]
+    st.write(nyitvatartas_df)
     nyitvatartas_df_nyitva_list = nyitvatartas_df[nyitvatartas_df['nyitva'] == 'igen']['date_time'].tolist()
     sheet_id_extrak = '1cFnHml4mtuMQTtk4bplRUKkV3XWDj4_E4x2ED-8wRH0'
     csv_extrak_url = f"https://docs.google.com/spreadsheets/d/{sheet_id_extrak}/export?format=csv&gid=0"
