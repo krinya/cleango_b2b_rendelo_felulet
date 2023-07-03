@@ -65,10 +65,9 @@ def create_b2b_form(authenticator, username, name, config):
     nyitvatartas_df = pd.read_csv(csv_url)
     # crete a date_time column from date and time columns
     nyitvatartas_df['date_time_2'] = nyitvatartas_df['date'].astype(str) + ' ' + nyitvatartas_df['time'].astype(str)
-    # convert date_time column to datetime
-    nyitvatartas_df['date_time_2'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format='%Y-%m-%d %H')
-    # filter for dates that is higher than today
     st.dataframe(nyitvatartas_df)
+    # convert date_time column to datetime
+    nyitvatartas_df['date_time_2'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format = 'mixed')
     nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_2'] >= datetime.now()]
     st.write(nyitvatartas_df)
     nyitvatartas_df_nyitva_list = nyitvatartas_df[nyitvatartas_df['nyitva'] == 'igen']['date_time'].tolist()
