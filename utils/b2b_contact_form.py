@@ -69,7 +69,7 @@ def create_b2b_form(authenticator, username, name, config):
     nyitvatartas_df['date_time_2'] = nyitvatartas_df['date_time_2'].astype(str) + f""":00"""
     # convert date_time column to datetime
     nyitvatartas_df['date_time_3'] = pd.to_datetime(nyitvatartas_df['date_time_2'], infer_datetime_format=True, errors='coerce')
-    nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_3'] >= datetime.now()]
+    nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_3'] >= datetime.now() + pd.Timedelta(hours=2)]
     nyitvatartas_df_nyitva_list = nyitvatartas_df[nyitvatartas_df['nyitva'] == 'igen']['date_time'].tolist()
     sheet_id_extrak = '1cFnHml4mtuMQTtk4bplRUKkV3XWDj4_E4x2ED-8wRH0'
     csv_extrak_url = f"https://docs.google.com/spreadsheets/d/{sheet_id_extrak}/export?format=csv&gid=0"
