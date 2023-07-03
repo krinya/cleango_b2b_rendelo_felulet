@@ -70,10 +70,8 @@ def create_b2b_form(authenticator, username, name, config):
     st.dataframe(nyitvatartas_df)
     st.write(nyitvatartas_df['date_time_2'].tolist())
     # convert date_time column to datetime
-    nyitvatartas_df['date_time_3'] = pd.to_datetime(nyitvatartas_df['date_time_2'])
-    st.dataframe(nyitvatartas_df)
+    nyitvatartas_df['date_time_3'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format='%Y-%m-%d %H:%M')
     nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_3'] >= datetime.now()]
-    st.dataframe(nyitvatartas_df)
     nyitvatartas_df_nyitva_list = nyitvatartas_df[nyitvatartas_df['nyitva'] == 'igen']['date_time'].tolist()
     sheet_id_extrak = '1cFnHml4mtuMQTtk4bplRUKkV3XWDj4_E4x2ED-8wRH0'
     csv_extrak_url = f"https://docs.google.com/spreadsheets/d/{sheet_id_extrak}/export?format=csv&gid=0"
