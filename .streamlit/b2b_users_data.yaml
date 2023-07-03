@@ -23,12 +23,6 @@ credentials:
       password: $2b$12$1MiV/KnZZ8by3a2iwEdS/uIyi4AdqLxo.pnYifGqg75gauH2ZVWOq
       wash_address: "1082 Budapest, Ciprus utca 2-8."
       szamlazasi_cim: "Poli Computer PC Kft. -  1037 Budapest, Montevideo utca 8."
-    chs:
-      email: chs@chs.hu
-      name: "CHS Hungary Kft."
-      password: $2b$12$bcLsoH32L4wV8wWdIaiXVecV0M6LMcvYk87q6KGLFktSEo0s7OAMS
-      wash_address: "2040 Budaörs, Vasút utca 15."
-      szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
     bonafarm:
       email: bonafarm@bonafarm.hu
       name: "Bonafarm Zrt."
@@ -161,6 +155,25 @@ credentials:
       szamlazasi_cim: "---"
       wash_address: "1011 Budapest, Szalag utca 22."
       password: "$2b$12$EmTdVYiI3wzwHF26bWwVbOk/EI/aJmjCotOyfJAfcZTu21ikUjHu2"
+    chs:
+      email: chs@chs.hu
+      name: "CHS Hungary Kft."
+      password: "$2b$12$qJrhawCoT5tLWvZaBC2TFO6rAmtOonPId5DNFIhqxvEKf6X.Vy85q"
+      wash_address: "2040 Budaörs, Vasút utca 15."
+      szamlazasi_cim: "CHS Hungary Kft. -  2040 Budaörs, Vasút utca 15."
+    visual_europe_group:
+      email: veg@veg.hu
+      name: "Visual Europe Group"
+      password: "$2b$12$/FRFVH0dUBwzW9DQyb2n9ulnx89TKhkEsqUJVPy7qHowi.rfg523W"
+      wash_address: "1044 Budapest, Óradna u. 11."
+      szamlazasi_cim: "Visual Europe Group - 1044 Budapest, Óradna u. 11."
+    civil:
+      email: cc@cc.hu
+      name: "Civil Cégcsoport"
+      password: "$2b$12$gFqHKVHNEreycp1aOQUTo.xnLzsFtRVauT.1scAF.8BzqNghwlovS"
+      wash_address: "1149 Budapest, Angol u. 77."
+      szamlazasi_cim: "Választott cégnév - 1149 Budapest, Angol u. 77."
+
 
 cookie:
   expiry_days: 0
