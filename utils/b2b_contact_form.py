@@ -65,9 +65,10 @@ def create_b2b_form(authenticator, username, name, config):
     nyitvatartas_df = pd.read_csv(csv_url)
     # crete a date_time column from date and time columns
     nyitvatartas_df['date_time_2'] = nyitvatartas_df['date'].astype(str) + ' ' + nyitvatartas_df['time'].astype(str)
+    nyitvatartas_df['date_time_2'] = df['date_time_2'].str.replace(r'\b(\d)\b', r'0\1', regex=True)
     st.dataframe(nyitvatartas_df)
     # convert date_time column to datetime
-    nyitvatartas_df['date_time_3'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format='%Y-%m-%d %H')
+    nyitvatartas_df['date_time_3'] = pd.to_datetime(nyitvatartas_df['date_time_2'], format='%Y-%m-%d-%H')
     st.dataframe(nyitvatartas_df)
     nyitvatartas_df = nyitvatartas_df[nyitvatartas_df['date_time_3'] >= datetime.now()]
     st.dataframe(nyitvatartas_df)
