@@ -222,6 +222,11 @@ def create_b2b_form(authenticator, username, name, config):
                     if email_user.find(".") == -1:
                         st.warning("Kérjük adjon meg egy valós e-mail címet!")
                         error_counter += 1
+                        
+                    # check email_user must not contain space
+                    if " " in email_user:
+                        st.warning("Kérjük, ne használjon szóközt az e-mail cimben!")
+                        error_counter += 1
 
                     # ehcek if extrak is greater than 1
                     if len(extrak) > 1:
