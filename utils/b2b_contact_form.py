@@ -51,7 +51,7 @@ def send_email(recipient_address, subject, body):
 def session_counter():
     # st.sesson counter intialization
     if 'session_counter' not in st.session_state:
-        st.session_state.session_counter = 1
+        st.session_state.session_counter = 0
     st.session_state.session_counter = 1
     return st.session_state.session_counter
 
@@ -189,6 +189,8 @@ def create_b2b_form(authenticator, username, name, config):
 
         if submitted:
             print("submitted")
+        if 'session_counter' not in st.session_state:
+            st.session_state.session_counter = 0
         if st.session_state.session_counter == 1:
             with st.spinner("Megrendelés elküldése folyamatban..."):
                 st.session_state.session_counter = 0
