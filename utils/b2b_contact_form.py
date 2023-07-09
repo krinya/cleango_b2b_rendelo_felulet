@@ -10,6 +10,9 @@ from PIL import Image
 from datetime import datetime
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
+import os
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 def add_picture_to_streamlit(image_path, caption = None):
     image = Image.open(image_path)
@@ -293,3 +296,12 @@ def create_b2b_form(authenticator, username, name, config):
                         except:
                             st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
                             st.write("{}".format(email_user))
+                        
+                        try:
+                            # send the slack message to the selected channel
+                            slacbot_token_str = st.secrets['slackbot']['token']
+                            client = WebClient(token=slacbot_token_str)
+                            string_to_send_with_link = f"""B2B rendeles erkezett. Az alabbi felhaszanlotol: {username}. Tovabbi informacio itt: https://cleango-dashboard.streamlit.app/B2B_orders"""
+                            client.chat_postMessage(channel="#"+"b2b_rendelo_felulet", text=string_to_send_with_link)
+                        except:
+                            print("Slack message sending error")

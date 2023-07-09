@@ -8,6 +8,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from utils.sql_functions import *
 from unidecode import unidecode
+import os
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 from pandas.api.types import (
     is_categorical_dtype,
