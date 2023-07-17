@@ -34,7 +34,7 @@ credentials:
       name: "Bonitás Befektetési Alapkezelő Zrt."
       wash_address: "1123 Budapest, Alkotás utca 53."
       szamlazasi_cim: "Bonitás Befektetési Alapkezelő Zrt. - 1123 Budapest, Alkotás utca 53. B. ép."
-      password: $2b$12$jvhBAs.4iwOXMHBQGBh4qeqleGn/2indY7FBvIYv/OLJaW5mciH4m
+      password: "$2b$12$RzDWVGj8E/9n0hpNlh3c/uq6PPNy4uyujGdNA1xcZbzGIsNXEQrSS"
     gls:
       email: gls@gls.hu
       name: "GLS General Logistics Systems Hungary Kft."
