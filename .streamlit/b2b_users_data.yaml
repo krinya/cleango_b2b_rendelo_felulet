@@ -182,7 +182,7 @@ credentials:
     mckinsey:
       email: mk@mk.hu
       name: "McKinsey & Company"
-      password: "$2b$12$ozH6Qxlikylp9bvtCZPeO.Qoxfo9QTdqe6MKztDIbeH/9jUMVdwGu"
+      password: "$2b$12$qZUXw15Zh7vw0r2g9is5GuB320nI2F/sQf8OM1HKQHFDen00hIeyK"
       wash_address: "1061 Budapest, Andrássy út 23."
       szamlazasi_cim: "McKinsey & Company -  	1061 Budapest, Andrássy út 23. "
 
