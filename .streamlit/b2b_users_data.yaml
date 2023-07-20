@@ -179,6 +179,12 @@ credentials:
       password: "$2b$12$JtHdyQOsxteGiCPlrwzar.fXKM8lo7rKikfDvxvpKfUlzgom2Pg2q"
       wash_address: "1117 Budapest, Budafoki út 60."
       szamlazasi_cim: "Manitu Solar Kft. - 1117 Budapest, Budafoki út 60."
+    mckinsey:
+      email: mk@mk.hu
+      name: "McKinsey & Company"
+      password: "$2b$12$ozH6Qxlikylp9bvtCZPeO.Qoxfo9QTdqe6MKztDIbeH/9jUMVdwGu"
+      wash_address: "1061 Budapest, Andrássy út 23."
+      szamlazasi_cim: "McKinsey & Company -  	1061 Budapest, Andrássy út 23. "
 
 
 cookie:
