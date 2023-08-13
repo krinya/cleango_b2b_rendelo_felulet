@@ -185,6 +185,12 @@ credentials:
       password: "$2b$12$qZUXw15Zh7vw0r2g9is5GuB320nI2F/sQf8OM1HKQHFDen00hIeyK"
       wash_address: "1061 Budapest, Andrássy út 23."
       szamlazasi_cim: "McKinsey & Company -  	1061 Budapest, Andrássy út 23. "
+    rossmann:
+      email: rm@rm.hu
+      name: "Rossmann Magyarország Kft."
+      password: "$2b$12$TEO5w9by/c2klgEYWvpFVuMCbfN.1w1BbIIQeR.oYbnvQF4vECdxa"
+      wash_address: "2225 Üllő, Zsaróka út 8."
+      szamlazasi_cim: "Rossmann Magyarország Kft. - 2225 Üllő, Zsaróka út 8."
 
 
 cookie:
