@@ -191,6 +191,12 @@ credentials:
       password: "$2b$12$TEO5w9by/c2klgEYWvpFVuMCbfN.1w1BbIIQeR.oYbnvQF4vECdxa"
       wash_address: "2225 Üllő, Zsaróka út 8."
       szamlazasi_cim: "Rossmann Magyarország Kft. - 2225 Üllő, Zsaróka út 8."
+    musclecar:
+      email: mc@mc.hu
+      name: "MuscleCar Budapest"
+      password: "$2b$12$ixQtcM2kxTKHPjSLLd0lj./pqzEy4vQ1OHHJSPLR7iTcell.FVGLi"
+      wash_address: "1135 Budapest, Reitter Ferenc utca 72. "
+      szamlazasi_cim: "AVP Auto Hun Kft - 1064 Budapest, Podmaniczky utca 57. 2. em. 14."
 
 
 cookie:
