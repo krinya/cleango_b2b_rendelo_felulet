@@ -197,6 +197,12 @@ credentials:
       password: "$2b$12$ixQtcM2kxTKHPjSLLd0lj./pqzEy4vQ1OHHJSPLR7iTcell.FVGLi"
       wash_address: "1135 Budapest, Reitter Ferenc utca 72. "
       szamlazasi_cim: "AVP Auto Hun Kft - 1064 Budapest, Podmaniczky utca 57. 2. em. 14."
+    serviceflow:
+      email: sf@sf.hu
+      name: "Service Flow Kft."
+      password: "$2b$12$CUeDuPAmQRXa2nY086TCqehMtEzwnQJPmYHJ0lz88JqY0GVdt3NnW"
+      wash_address: "1134 Budapest, Tüzér utca 39."
+      szamlazasi_cim: "Service Flow Kft. - 1134 Budapest, Tüzér utca 39."
 
 
 cookie:
