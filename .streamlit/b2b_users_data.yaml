@@ -203,6 +203,12 @@ credentials:
       password: "$2b$12$CUeDuPAmQRXa2nY086TCqehMtEzwnQJPmYHJ0lz88JqY0GVdt3NnW"
       wash_address: "1134 Budapest, Tüzér utca 39."
       szamlazasi_cim: "Service Flow Kft. - 1134 Budapest, Tüzér utca 39."
+    affideagroup:
+      email: ag@ag.hu
+      name: "Affidea Group Kft."
+      password: "$2b$12$8/H/8GLV96tAlP2zwETab.ygZnE9.W5KBa.3WxVIE71VeaVGNlXLu"
+      wash_address: "1083 Budapest, Bókay János u. 44-46."
+      szamlazasi_cim: "Affidea Group Kft. - 1083 Budapest, Bókay János u. 44-46."
 
 
 cookie:
