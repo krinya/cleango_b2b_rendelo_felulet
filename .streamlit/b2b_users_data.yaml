@@ -209,6 +209,12 @@ credentials:
       password: "$2b$12$8/H/8GLV96tAlP2zwETab.ygZnE9.W5KBa.3WxVIE71VeaVGNlXLu"
       wash_address: "1083 Budapest, Bókay János u. 44-46."
       szamlazasi_cim: "Affidea Group Kft. - 1083 Budapest, Bókay János u. 44-46."
+    acenetwork:
+      email: an@an.hu
+      name: "ACE Network Zrt."
+      password: "$2b$12$yTclTommX/IYOsp26Hszw.flcHh8KZ7xPGUOe.mArEr1S9M5gJoAK"
+      wash_address: "1117 Budapest, Október huszonharmadika u. 8-10."
+      szamlazasi_cim: "ACE Network Zrt. - 1117 Budapest, Október huszonharmadika u. 8-10."
 
 
 cookie:
