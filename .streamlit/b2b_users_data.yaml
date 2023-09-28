@@ -215,6 +215,12 @@ credentials:
       password: "$2b$12$yTclTommX/IYOsp26Hszw.flcHh8KZ7xPGUOe.mArEr1S9M5gJoAK"
       wash_address: "1117 Budapest, Október huszonharmadika u. 8-10."
       szamlazasi_cim: "ACE Network Zrt. - 1117 Budapest, Október huszonharmadika u. 8-10."
+    laterex:
+      email: ll@ll.hu
+      name: "Laterex Építő Zrt."
+      password: "$2b$12$vtCvjmIOYn8BVOBLdOCGfuPuE7u4XuV6/WENZ8MDmH4FLN.xwR2fu"
+      wash_address: "1095 Budapest, Dalai Láma utca 1-12."
+      szamlazasi_cim: "Laterex Építő Zrt. - 1095 Budapest, Hídépítő utca 1-12."
 
 
 cookie:
