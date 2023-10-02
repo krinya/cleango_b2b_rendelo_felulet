@@ -221,6 +221,12 @@ credentials:
       password: "$2b$12$vtCvjmIOYn8BVOBLdOCGfuPuE7u4XuV6/WENZ8MDmH4FLN.xwR2fu"
       wash_address: "1095 Budapest, Dalai Láma utca 1-12."
       szamlazasi_cim: "Laterex Építő Zrt. - 1095 Budapest, Hídépítő utca 1-12."
+    elysium:
+      email: ll@ll.hu
+      name: "Elysium Lakópark"
+      password: "$2b$12$6923o3.HjNXYs8YcG0JvDu.XEQaXFONj/AAl6XWFsN53uFAiACt7S"
+      wash_address: "1025 Budapest, Vérhalom u. 17."
+      szamlazasi_cim: "Kérjük megadni a számlázási adatokat (név, cím, -cég esetén- adószám stb.)"
 
 
 cookie:
