@@ -251,6 +251,7 @@ def create_b2b_form(authenticator, username, name, config):
                         answer_dict = {
                             "username": username,
                             "email_user": email_user,
+                            "telefon": telefon,
                             "number_plate": number_plate,
                             "auto_markak_tipusok": auto_markak_tipusok,
                             "helyszin": helyszin,
