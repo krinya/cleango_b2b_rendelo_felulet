@@ -287,12 +287,12 @@ def create_b2b_form(authenticator, username, name, config):
                         conn.close()
                             
                         # send the email to CleanGo
-                        for email_adress_to_us in email_list_to_us:
-                            try:
-                                send_email(email_adress_to_us, email_subject, email_body_to_us)
-                                st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
-                            except:
-                                st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
+                        # for email_adress_to_us in email_list_to_us:
+                        #     try:
+                        #         send_email(email_adress_to_us, email_subject, email_body_to_us)
+                        #         st.write("Megrendelését a CleanGo megkapta. A megrendelését a lehető leghamarabb feldolgozzuk.")
+                        #     except:
+                        #         st.write("Hoppá valami hiba történt. A megrendelését a CleanGo nem kapta meg.")
                             
                         # send the email to the user
                         try:
