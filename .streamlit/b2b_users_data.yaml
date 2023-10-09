@@ -227,6 +227,13 @@ credentials:
       password: "$2b$12$6923o3.HjNXYs8YcG0JvDu.XEQaXFONj/AAl6XWFsN53uFAiACt7S"
       wash_address: "1025 Budapest, Vérhalom u. 17."
       szamlazasi_cim: "Kérjük megadni a számlázási adatokat (név, cím, -cég esetén- adószám stb.)"
+    eagle_industry:
+      email: ll@ll.hu
+      name: "Eagle Industry Hungary Kft."
+      password: "$2b$12$rfHCB1KggfwcqJ.b7FvBnOaLFbVY0Tu2Bur8FofGUNc8imMoQE/m2"
+      wash_address: "2234 Maglód, Jászberényi út 23."
+      szamlazasi_cim: "Eagle Industry Hungary Kft. - 2234 Maglód, Jászberényi út 23."
+      
 
 
 cookie:
