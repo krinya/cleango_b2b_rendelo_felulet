@@ -166,7 +166,7 @@ credentials:
       name: "FleetHub Magyarország Kft"
       password: "$2b$12$IVw4AnWCIM655iqFQXsOUuvmBSQR8lYLPYzsr6v6WGaLGty22ViQG"
       wash_address: "1044 Budapest, Óradna u. 11."
-      szamlazasi_cim: ["FleetHub Magyarország Kft - 1044 Budapest, Óradna u. 11.", "Visual Europe Projekt Kft - 1044 Budapest, Óradna u. 11.", "Visual Europe Production Kft - 1044 Budapest, Óradna u. 11."]
+      szamlazasi_cim: ["FleetHub Magyarország Kft - 1044 Budapest, Óradna u. 11.", "Visual Europe Projekt Kft - 3000 Hatvan, Gábor Áron u. 22.", "Visual Europe Production Kft - 3000 Hatvan, Gábor Áron u. 22."]
     civil:
       email: cc@cc.hu
       name: "Civil Cégcsoport"
