@@ -239,6 +239,12 @@ credentials:
       password: "$2b$12$j5qICVYKGPHtQZg0/pZCHu1aky7FM.vC/YkayOHn3FrfyF/ba9mvO"
       wash_address: "1026 Budapest, Pasaréti út 122-124"
       szamlazasi_cim: "Bdpst Zrt. - 1026 Budapest, Pasaréti út 122-124"
+    biokor:
+      email: bk@bk.hu
+      name: "Biokör Kft."
+      password: "$2b$12$Us0pLoF6NaVD9gJDS/ofhuR.sdiBheQD1vBOAmryK21V2izarNbE6"
+      wash_address: "1026 Budapest, Pasaréti út 122-124"
+      szamlazasi_cim: "Biokör Kft. - 1089 Budapest, Bláthy Ottó u. 41"
       
 
 
