@@ -245,7 +245,7 @@ credentials:
       password: "$2b$12$Us0pLoF6NaVD9gJDS/ofhuR.sdiBheQD1vBOAmryK21V2izarNbE6"
       wash_address: "1089 Budapest, Bláthy Ottó u. 41"
       szamlazasi_cim: "Biokör Kft. - 1089 Budapest, Bláthy Ottó u. 41"
-    Minta Kft:
+    mintakft:
       email: bk@bk.hu
       name: "Minta Kft."
       password: "$2b$12$Yx/xHSjeJH4zCXt4EYROZuJyF2dQKUbBTTTULToKQjaUe7q.LnRVq"
