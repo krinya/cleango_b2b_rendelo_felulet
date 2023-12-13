@@ -245,12 +245,12 @@ credentials:
       password: "$2b$12$Us0pLoF6NaVD9gJDS/ofhuR.sdiBheQD1vBOAmryK21V2izarNbE6"
       wash_address: "1089 Budapest, Bláthy Ottó u. 41"
       szamlazasi_cim: "Biokör Kft. - 1089 Budapest, Bláthy Ottó u. 41"
-    mintakft:
+    karacsonyimosas:
       email: bk@bk.hu
-      name: "Minta Kft."
-      password: "$2b$12$Yx/xHSjeJH4zCXt4EYROZuJyF2dQKUbBTTTULToKQjaUe7q.LnRVq"
-      wash_address: "1089 Budapest, Minta utca 6."
-      szamlazasi_cim: "Minta Kft. - 1089 Budapest, Minta utca 6"
+      name: "Cleango ügyfél"
+      password: "$2b$12$jqc66B8RTlbCkGGoAL9m4.Q4eN5goCj7eBhYR6KiAUdBi6mZ7rzva"
+      wash_address: "Kérjük adja meg az egyéb mezőben az autó parkolási helyét!"
+      szamlazasi_cim: "Kérjük adja meg az egyéb mezőben a számlázási nevet és címet (cég esetén adószámot is)!"
       
 
 
