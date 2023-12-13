@@ -249,8 +249,8 @@ credentials:
       email: bk@bk.hu
       name: "Cleango ügyfél"
       password: "$2b$12$jqc66B8RTlbCkGGoAL9m4.Q4eN5goCj7eBhYR6KiAUdBi6mZ7rzva"
-      wash_address: "Kérjük adja meg az egyéb mezőben az autó parkolási helyét!"
-      szamlazasi_cim: "Kérjük adja meg az egyéb mezőben a számlázási nevet és címet (cég esetén adószámot is)!"
+      wash_address: "Kérjük válassza ki az egyéb lehetőséget és a mezőben adja meg az autó parkolási helyét!"
+      szamlazasi_cim: "Kérjük válassza ki az egyéb lehetőséget és a mezőben adja meg a számlázási nevet és címet (cég esetén adószámot is)!"
       
 
 
