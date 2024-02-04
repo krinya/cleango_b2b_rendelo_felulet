@@ -251,7 +251,12 @@ credentials:
       password: "$2b$12$jqc66B8RTlbCkGGoAL9m4.Q4eN5goCj7eBhYR6KiAUdBi6mZ7rzva"
       wash_address: "Kérjük válassza ki az egyéb lehetőséget és a mezőben adja meg az autó parkolási helyét!"
       szamlazasi_cim: "Kérjük válassza ki az egyéb lehetőséget és a mezőben adja meg a számlázási nevet és címet (cég esetén adószámot is)!"
-      
+    wozavez:
+      email: wc@wc.hu
+      name: "Wozavez Consulting Zrt."
+      password: "$2b$12$SWHfp2Q14/xsaptGjtg1y.rM9oY02qXaZo2UWDo/YHDcMdatLFSK."
+      wash_address: "1147 Budapest, Czobor u. 77."
+      szamlazasi_cim: "Wozavez Consulting Zrt. - 1147 Budapest, Czobor u. 77."     
 
 
 cookie:
