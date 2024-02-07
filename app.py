@@ -49,7 +49,10 @@ if authentication_status:
         st.markdown("You can use the following link to edid the opening hours: [Opening Hours](https://docs.google.com/spreadsheets/d/1T0aljTRIyMcimuvTY1aWY_aPX4kwnV2gtl1EMIXB8g0/edit#gid=0)")
         authenticator.logout('Logout', 'main')
     else:
-        create_b2b_form(authenticator=authenticator, username=username, name=name, config=config)
+        # Initialize disabled for form_submit_button to False
+        if "disabled_form" not in st.session_state:
+            st.session_state.disabled_form = False
+        create_b2b_form(authenticator=authenticator, username=username, name=name, config=config, disable_form = st.session_state.disabled_form)
 elif authentication_status == False:
     with col1:
         st.error('Username/password is incorrect')

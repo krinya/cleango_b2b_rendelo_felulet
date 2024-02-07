@@ -13,6 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
+import time
 
 def add_picture_to_streamlit(image_path, caption = None):
     image = Image.open(image_path)
@@ -53,9 +54,10 @@ def session_counter():
     if 'session_counter' not in st.session_state:
         st.session_state.session_counter = 0
     st.session_state.session_counter = 1
+
     return st.session_state.session_counter
 
-def create_b2b_form(authenticator, username, name, config):
+def create_b2b_form(authenticator, username, name, config, disable_form):
 
     email_list_to_us = ["info@cleango.hu"] #ez az email cimre fogja elkuldeni a rendeles adatait
 
@@ -77,7 +79,14 @@ def create_b2b_form(authenticator, username, name, config):
     sheet_id_extrak = '1cFnHml4mtuMQTtk4bplRUKkV3XWDj4_E4x2ED-8wRH0'
     csv_extrak_url = f"https://docs.google.com/spreadsheets/d/{sheet_id_extrak}/export?format=csv&gid=0"
     extrak_df = pd.read_csv(csv_extrak_url)
-    extrak_df_list = extrak_df['extra_nev'].tolist()
+    if username =='hellenergy':
+        extrak_df_list = extrak_df['extra_nev_hellenergy'].tolist()
+    elif username == 'peri':
+        extrak_df_list = extrak_df['extra_nev_peri'].tolist()
+    else:
+        extrak_df_list = extrak_df['extra_nev'].tolist()
+    # delete nan values from the list
+    extrak_df_list = [x for x in extrak_df_list if str(x) != 'nan']
 
     # load auto markak
     auto_markak_df = pd.read_csv('data/auto_markak_tipusok.csv')
@@ -103,7 +112,7 @@ def create_b2b_form(authenticator, username, name, config):
     
         col1, col2 = st.columns([2, 2])
         with col1:
-            mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja* (kötelező)", nyitvatartas_df_nyitva_list)
+            mosas_datum_ido = st.selectbox("Mosás dátuma és időpontja* (kötelező)", nyitvatartas_df_nyitva_list, key='mosas_datum_ido')
 
             try:
                 helyszin_default = config['credentials']['usernames'][username]['wash_address']
@@ -174,13 +183,18 @@ def create_b2b_form(authenticator, username, name, config):
         megjegyzes = st.text_area("Megjegyzés (opcionális)")
         email_subject = "B2B mosás rendelés érkezett - {}".format(username)
 
-        submitted = st.form_submit_button("Megrendelés elküldése", on_click=session_counter)
+        if 'button_press_counter' not in st.session_state:
+            st.session_state['button_press_counter'] = 0
 
-        col1, col2 = st.columns([2, 2])
+        submitted = st.form_submit_button("Megrendelés elküldése", on_click=session_counter, disabled=st.session_state.disabled_form)
+
+        col1, col2 = st.columns([3, 2])
 
         with col1:
 
-            st.markdown("Nyomja meg a gombot, hogy a megrendelését elküldje nekünk.")
+            st.markdown(f"Nyomja meg a gombot, hogy a megrendelését elküldje nekünk.")
+            #st.markdown(f"Eddig ennyiszer nyomta meg a gombot: {st.session_state.button_press_counter}")
+            #st.session_state.button_press_counter += 1
             #st.markdown("Ha megnyomja a gombot, és nem lát semmilyen egyéb üzenetet, ez alatt a mondat alatt, akkor nyomja meg a gombot újra.")
         with col2:
             st.write("Ha valami kérdése van, kérjük keressen minket bizalommal a következő elérhetőségeken:")
@@ -191,6 +205,8 @@ def create_b2b_form(authenticator, username, name, config):
             print("submitted")
         if 'session_counter' not in st.session_state:
             st.session_state.session_counter = 0
+        if 'disabled_form' not in st.session_state:
+            st.session_state.disabled_form = False
         if st.session_state.session_counter == 1:
             with st.spinner("Megrendelés elküldése folyamatban..."):
                 st.session_state.session_counter = 0
@@ -245,6 +261,8 @@ def create_b2b_form(authenticator, username, name, config):
                         error_counter += 1
 
                     if error_counter == 0:
+                        st.session_state.disabled_form = True
+                        time.sleep(5)
  
                         megjegyzes = megjegyzes.replace('\n', '')
 
@@ -313,3 +331,5 @@ def create_b2b_form(authenticator, username, name, config):
                             client.chat_postMessage(channel="#"+"b2b_rendelo_felulet", text=string_to_send_with_link)
                         except:
                             print("Slack message sending error")
+
+                        st.session_state.disabled_form = False
