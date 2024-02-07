@@ -260,8 +260,6 @@ def create_b2b_form(authenticator, username, name, config, disable_form):
 
                     if error_counter == 0:
                         st.session_state.disabled_form = True
-                        time.sleep(5)
- 
                         megjegyzes = megjegyzes.replace('\n', '')
 
                         answer_dict = {
@@ -313,10 +311,11 @@ def create_b2b_form(authenticator, username, name, config, disable_form):
                             
                         # send the email to the user
                         try:
-                            send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
-                            st.write("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
-                            st.write(" {}".format(email_user))
-                            st.write("Kérjük ellenőrizze a spam mappát is!")
+                            #send_email(email_user, "CleanGo - B2B Rendelés Visszaigazolás", email_body_to_user)
+                            st.markdown("A megrendelési visszaigazolást az alábbi megadott email címre is elküldtük.")
+                            st.markdown(" {}".format(email_user))
+                            st.markdown("Az email 5 percen belül érkezik meg (nem azonnal).")
+                            st.markdown("Kérjük ellenőrizze a spam mappát is, mert sokszor oda kerül a visszaigazolás!")
                         except:
                             st.write("Hoppá valami hiba történt. A visszaigazolást nem tudtuk tudtuk elküldeni az alább megadott emailcimre!")
                             st.write("{}".format(email_user))
