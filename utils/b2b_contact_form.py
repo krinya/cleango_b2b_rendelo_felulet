@@ -81,8 +81,6 @@ def create_b2b_form(authenticator, username, name, config, disable_form):
     extrak_df = pd.read_csv(csv_extrak_url)
     if username =='hellenergy':
         extrak_df_list = extrak_df['extra_nev_hellenergy'].tolist()
-    elif username == 'peri':
-        extrak_df_list = extrak_df['extra_nev_peri'].tolist()
     else:
         extrak_df_list = extrak_df['extra_nev'].tolist()
     # delete nan values from the list
