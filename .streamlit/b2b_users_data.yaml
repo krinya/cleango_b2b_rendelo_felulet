@@ -256,13 +256,13 @@ credentials:
       name: "Wozavez Consulting Zrt."
       password: "$2b$12$SWHfp2Q14/xsaptGjtg1y.rM9oY02qXaZo2UWDo/YHDcMdatLFSK."
       wash_address: "1147 Budapest, Czobor u. 77."
-      szamlazasi_cim: "Wozavez Consulting Zrt. - 1147 Budapest, Czobor u. 77."    
+      szamlazasi_cim: "Wozavez Consulting Zrt. - 1147 Budapest, Czobor u. 77."
     aditus:
       email: ad@ad.hu
       name: "Adaptatio-M Kft."
       password: "$2b$12$I3B7eb5WDY9vW3oCbNG11OlseKzI5ODtaMlS6M1NtKmzTRo3iuYdC"
       wash_address: ["1054 Budapest, Báthori utca 3.", "1147 Budapest, Birtok utca 15", "1025 Budapest, Ruthén út 55."]
-      szamlazasi_cim:["Aditus Zrt. - 1054 Budapest, Báthori utca 3.", "Adaptatio-M Kft. - 1054 Budapest, Báthori utca 3."]
+      szamlazasi_cim: ["Aditus Zrt. - 1054 Budapest, Báthori utca 3.", "Adaptatio-M Kft. - 1054 Budapest, Báthori utca 3."]
 
 
 cookie:
