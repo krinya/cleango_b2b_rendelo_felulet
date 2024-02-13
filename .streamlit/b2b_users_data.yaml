@@ -100,7 +100,7 @@ credentials:
       name: "Elegant Design Zrt."
       szamlazasi_cim: "Elegant Design Zrt. - 1089 Budapest, VIII., Elnök utca 1. 2. emelet"
       wash_address: "1089 Budapest, VIII., Elnök utca 1. 2. emelet"
-      password: $2b$12$"$2b$12$qb2hSuD2YIzaRLZUxlOGReGULAJSyUHoRKeT73Phqw7kwh9nBNwlK"
+      password: "$2b$12$qb2hSuD2YIzaRLZUxlOGReGULAJSyUHoRKeT73Phqw7kwh9nBNwlK"
     lendvai:
       email: lendvai@lendvai.hu
       name: "Lendvai és Társai Ügyvédi Iroda"
