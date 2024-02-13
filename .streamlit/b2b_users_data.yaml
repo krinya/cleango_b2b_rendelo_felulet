@@ -95,12 +95,12 @@ credentials:
       szamlazasi_cim: "Berlin Chemie/A. Menarini Kft. - 1087 Budapest, Hungária körút 30/A 8. emelet"
       wash_address: "1087 Budapest, Hungária körút 30/A 8. emelet"
       password: "$2b$12$F1BFEPjhPceS/XOdSCL3duvd77Xb2F2zdNIW6syxC3GqPFp1ym5b6"
-    elegant_design:
+    elegantdesign:
       email: elegant_desgin@elegant_desgin.hu
       name: "Elegant Design Zrt."
       szamlazasi_cim: "Elegant Design Zrt. - 1089 Budapest, VIII., Elnök utca 1. 2. emelet"
       wash_address: "1089 Budapest, VIII., Elnök utca 1. 2. emelet"
-      password: $2b$12$5yt5hsBWbM1sPbIFd9z0JudFbLBv8ICqatAJ4KUsW5VsDEHQkmwqi
+      password: $2b$12$"$2b$12$qb2hSuD2YIzaRLZUxlOGReGULAJSyUHoRKeT73Phqw7kwh9nBNwlK"
     lendvai:
       email: lendvai@lendvai.hu
       name: "Lendvai és Társai Ügyvédi Iroda"
