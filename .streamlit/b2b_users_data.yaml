@@ -263,10 +263,10 @@ credentials:
       password: "$2b$12$I3B7eb5WDY9vW3oCbNG11OlseKzI5ODtaMlS6M1NtKmzTRo3iuYdC"
       wash_address: ["1054 Budapest, Báthori utca 3.", "1147 Budapest, Birtok utca 15", "1025 Budapest, Ruthén út 55."]
       szamlazasi_cim: ["Aditus Zrt. - 1054 Budapest, Báthori utca 3.", "Adaptatio-M Kft. - 1054 Budapest, Báthori utca 3."]
-    wozavez:
+    reflex:
       email: rf@rf.hu
       name: "Reflex Fuvarozási és Szállítmányozási Kft"
-      password: "$2b$12$SWHfp2Q14/xsaptGjtg1y.rM9oY02qXaZo2UWDo/YHDcMdatLFSK."
+      password: "$2b$12$7VTknI335qqwWOr2rZDLl.s1dY8TG/J7tyfn4I5JfEkWA0ShLGW7G"
       wash_address: " 1107 Budapest, Száva utca 13-15."
       szamlazasi_cim: "Reflex Fuvarozási és Szállítmányozási Kft -  1107 Budapest, Száva utca 13-15."
 
