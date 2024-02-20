@@ -269,6 +269,12 @@ credentials:
       password: "$2b$12$7VTknI335qqwWOr2rZDLl.s1dY8TG/J7tyfn4I5JfEkWA0ShLGW7G"
       wash_address: " 1107 Budapest, Száva utca 13-15."
       szamlazasi_cim: "Reflex Fuvarozási és Szállítmányozási Kft -  1107 Budapest, Száva utca 13-15."
+    nebih:
+      email: nn@nn.hu
+      name: "Nemzeti Élelmiszerlánc-biztonsági Hivatal"
+      password: "$2b$12$x9TLfAGV2N.cD0UbY.4dQuFXRIg6K193DEey630v20/f7chF/.vC6"
+      wash_address: "1024 Budapest, Keleti Károly utca 24."
+      szamlazasi_cim: "Nemzeti Élelmiszerlánc-biztonsági Hivatal -  1024 Budapest, Keleti Károly utca 24."
 
 
 cookie:
