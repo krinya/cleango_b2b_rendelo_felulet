@@ -267,7 +267,7 @@ credentials:
       email: rf@rf.hu
       name: "Reflex Fuvarozási és Szállítmányozási Kft"
       password: "$2b$12$7VTknI335qqwWOr2rZDLl.s1dY8TG/J7tyfn4I5JfEkWA0ShLGW7G"
-      wash_address: " 1107 Budapest, Száva utca 13-15."
+      wash_address: "1107 Budapest, Kőér utca 3/D"
       szamlazasi_cim: "Reflex Fuvarozási és Szállítmányozási Kft -  1107 Budapest, Száva utca 13-15."
     nebih:
       email: nn@nn.hu
