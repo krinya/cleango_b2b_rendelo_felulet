@@ -284,7 +284,7 @@ credentials:
     birdiecar:
       email: bc@bc.hu
       name: "BirdieCar Hungary Kft."
-      password: "$2b$12$9iscchP.lVwyNDj4Cye8eeymzv4hrLdyJx1sqxW.QfH.FyrNWVz/2"
+      password: "$2b$12$terz0frIE1SgQ6RxyUfKROf2dQD91prMDoCaZO6JFILK6noIx59Bu"
       wash_address: "1151 Budapest, Külső Fóti út 26"
       szamlazasi_cim: "BirdieCar Hungary Kft. - 1131 Budapest, Jász utca 179."
 
