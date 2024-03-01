@@ -275,6 +275,12 @@ credentials:
       password: "$2b$12$x9TLfAGV2N.cD0UbY.4dQuFXRIg6K193DEey630v20/f7chF/.vC6"
       wash_address: "1024 Budapest, Keleti Károly utca 24."
       szamlazasi_cim: "Nemzeti Élelmiszerlánc-biztonsági Hivatal -  1024 Budapest, Keleti Károly utca 24."
+    eb_hungary:
+      email: eh@eh.hu
+      name: "EB Hungary Invest Kft."
+      password: "$2b$12$NDysbb39u2vYGlHRvRn4webSXF9ovpkxXxmSDysoI.7ryeQPqhAOq"
+      wash_address: "1107 Budapest, Fogadó utca 4."
+      szamlazasi_cim: ["EB Hungary Invest Kft - 1107 Budapest Fogadó utca 4.", "Szilas Építő Kft. - 1151 Budapest, Károlyi Sándor út 20.", "Vitruvius Építő Kft. - 1062 Budapest, Andrássy út 100."]
 
 
 cookie:
