@@ -111,7 +111,7 @@ credentials:
       email: noispot@noispot.hu
       name: "Noispot Innovations Kft."
       szamlazasi_cim: "Noispot Innovations Kft. - 6722 Szeged, Boldogasszony sugárút 21. 1. em."
-      wash_address: "1117, Gábor Dénes utca 4."
+      wash_address: "1117 Budapest, Gábor Dénes utca 4."
       password: $2b$12$I6QfISr7uck0C20mU07oXuRBtF/DpYoOsBKCCRrcbYPoPJEsImYjK
     geohidroterv:
       email: geohidroterv@geohidroterv.hu
