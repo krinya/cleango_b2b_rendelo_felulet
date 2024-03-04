@@ -287,6 +287,12 @@ credentials:
       password: "$2b$12$terz0frIE1SgQ6RxyUfKROf2dQD91prMDoCaZO6JFILK6noIx59Bu"
       wash_address: "1151 Budapest, Külső Fóti út 26"
       szamlazasi_cim: "BirdieCar Hungary Kft. - 1131 Budapest, Jász utca 179."
+    jcdecaux :
+      email: jd@jd.hu
+      name: "JCDecaux Hungary Zrt."
+      password: "$2b$12$ufmsX0w/qqC3N9zEtJzSXOdTHhKrc97KnACNBYYYmfrDgER1agIh6"
+      wash_address: "1027 Budapest, Ganz utca 16."
+      szamlazasi_cim: "JCDecaux Hungary Zrt. - 1027 Budapest, Ganz utca 16."
     
 
 
