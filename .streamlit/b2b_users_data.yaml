@@ -284,7 +284,7 @@ credentials:
     jcdecaux:
       email: jd@jd.hu
       name: "JCDecaux Hungary Zrt."
-      password: "$2b$12$ufmsX0w/qqC3N9zEtJzSXOdTHhKrc97KnACNBYYYmfrDgER1agIh6"
+      password: "$2b$12$Iq0gj0WwHehungQDBI2AAON.gzJzdgAcnvEXoc2l8Sr0v8BNu/c0u"
       wash_address: "1027 Budapest, Ganz utca 16."
       szamlazasi_cim: "JCDecaux Hungary Zrt. - 1027 Budapest, Ganz utca 16."
     birdiecar:
