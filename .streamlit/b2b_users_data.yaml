@@ -299,9 +299,13 @@ credentials:
       password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
       wash_address: ["Mosas cime amit megadott1", "Mosas cime amit megadott2"]
       szamlazasi_cim: ["cim1", "cim2"]
+    random_1:
+      email: random@random.hu
+      name: "Cegnev"
+      password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
+      wash_address: ["Mosas cime amit megadott1", "Mosas cime amit megadott2"]
+      szamlazasi_cim: ["cim1", "cim2"]
     
-    
-
 
 cookie:
   expiry_days: 0
