@@ -293,6 +293,12 @@ credentials:
       password: "$2b$12$terz0frIE1SgQ6RxyUfKROf2dQD91prMDoCaZO6JFILK6noIx59Bu"
       wash_address: "1151 Budapest, Külső Fóti út 26"
       szamlazasi_cim: "BirdieCar Hungary Kft. - 1131 Budapest, Jász utca 179."
+    felhasznalonev_random:
+      email: random@random.hu
+      name: "Random ceg"
+      password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
+      wash_address: "1151 Budapest, Külső Fóti út 26"
+      szamlazasi_cim: ["BirdieCar Hungary Kft. - 1131 Budapest, Jász utca 179.", "masik cim"]
     
     
 
