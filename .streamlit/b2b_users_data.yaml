@@ -299,7 +299,7 @@ credentials:
       password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
       wash_address: ["Mosas cime amit megadott1", "Mosas cime amit megadott2"]
       szamlazasi_cim: ["cim1", "cim2"]
-    random_1:
+    Közti:
       email: random@random.hu
       name: "Közti Zrt."
       password: "$2b$12$APbYiV9yUHB6XjN7BGyEFuZfc08LOa1n63zkUpTRnXl/4x1Z8ziem"
