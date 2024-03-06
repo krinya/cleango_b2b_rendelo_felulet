@@ -302,9 +302,9 @@ credentials:
     random_1:
       email: random@random.hu
       name: "Közti Zrt."
-      password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
-      wash_address: ["Mosas cime amit megadott1", "Mosas cime amit megadott2"]
-      szamlazasi_cim: ["cim1", "cim2"]
+      password: "$2b$12$APbYiV9yUHB6XjN7BGyEFuZfc08LOa1n63zkUpTRnXl/4x1Z8ziem"
+      wash_address: ["1023 Budapest Lublói utca 2", "1023 Budapest Kolozsvári Tamás utca 11"]
+      szamlazasi_cim: ["1023 Budapest Lublói utca 2"]
     
 
 cookie:
