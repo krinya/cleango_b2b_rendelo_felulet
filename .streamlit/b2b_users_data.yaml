@@ -293,18 +293,24 @@ credentials:
       password: "$2b$12$terz0frIE1SgQ6RxyUfKROf2dQD91prMDoCaZO6JFILK6noIx59Bu"
       wash_address: "1151 Budapest, Külső Fóti út 26"
       szamlazasi_cim: "BirdieCar Hungary Kft. - 1131 Budapest, Jász utca 179."
+    bayzoltan:
+      email: random@random.hu
+      name: "Bay Zoltán Közhasznú Nonprofit Kft."
+      password: "$2b$12$kP6KjZBlPWvx5QSeDLs82e.BJ6y1SkC8.MMf8R7drV9DH99WdzHzy"
+      wash_address: ["1116 Budapest Kondorfa utca 1.", "1125 Budapest Kikelet utca 36."]
+      szamlazasi_cim: "Bay Zoltán Közhasznú Nonprofit Kft. - 1116 Budapest Kondorfa utca 1."
+    Közti:
+      email: random@random.hu
+      name: "Közti Zrt."
+      password: "$2b$12$APbYiV9yUHB6XjN7BGyEFuZfc08LOa1n63zkUpTRnXl/4x1Z8ziem"
+      wash_address: ["1023 Budapest Lublói utca 2", "1023 Budapest Kolozsvári Tamás utca 11"]
+      szamlazasi_cim: ["Közti Zrt. - 1023 Budapest Lublói utca 2"]
     proba_felhasznalo_csenge:
       email: random@random.hu
       name: "Cegnev"
       password: "$2b$12$Yk5HV0rPWITPAREBprlVuuEF2.63M0gBlRZ4jqiv.Pz5IuHtqghIu"
       wash_address: ["Mosas cime amit megadott1", "Mosas cime amit megadott2"]
       szamlazasi_cim: ["cim1", "cim2"]
-    Közti:
-      email: random@random.hu
-      name: "Közti Zrt."
-      password: "$2b$12$APbYiV9yUHB6XjN7BGyEFuZfc08LOa1n63zkUpTRnXl/4x1Z8ziem"
-      wash_address: ["1023 Budapest Lublói utca 2", "1023 Budapest Kolozsvári Tamás utca 11"]
-      szamlazasi_cim: ["1023 Budapest Lublói utca 2"]
     
 
 cookie:
