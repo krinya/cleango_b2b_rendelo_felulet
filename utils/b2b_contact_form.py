@@ -57,7 +57,7 @@ def session_counter():
 
     return st.session_state.session_counter
 
-def create_b2b_form(authenticator, username, name, config, disable_form):
+def create_b2b_form(authenticator, username, name, config):
 
     email_list_to_us = ["info@cleango.hu"] #ez az email cimre fogja elkuldeni a rendeles adatait
 
