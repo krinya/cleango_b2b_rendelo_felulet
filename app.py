@@ -93,8 +93,8 @@ if st.session_state.authentication_status:
     col1, col2, col3 = st.columns([6, 1, 1])
     with col1:
         st.write("Kapcsolat: +36 30 141 5100 \n\n{}, üdvözli a CleanGo. Az alábbi userrel van bejelentkezve: {}.".format(st.session_state.name, st.session_state.username))
-    with col3:
-        st.session_state.authenticator.logout('Logout', 'main')
+    # with col3:
+    #     st.session_state.authenticator.logout('Logout', 'main')
 
     main_container = st.container(border=True)
 
