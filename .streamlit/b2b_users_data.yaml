@@ -305,6 +305,12 @@ credentials:
       password: "$2b$12$APbYiV9yUHB6XjN7BGyEFuZfc08LOa1n63zkUpTRnXl/4x1Z8ziem"
       wash_address: ["1023 Budapest Lublói utca 2", "1023 Budapest Kolozsvári Tamás utca 11"]
       szamlazasi_cim: ["Közti Zrt. - 1023 Budapest Lublói utca 2"]
+    Otthon66:
+      email: random@random.hu
+      name: "Otthon 66 Kft."
+      password: "$2b$12$QTcStPIQykG8DBl.83p73OC8hy7..6k5SUDQu.aKbotHSyjrqre0y"
+      wash_address: ["1183 Budapest Gyömrői út 97"]
+      szamlazasi_cim: ["Otthon 66. Kft. - 2760 Nagykáta Új utca 15"]
     proba_felhasznalo_csenge:
       email: random@random.hu
       name: "Cegnev"
