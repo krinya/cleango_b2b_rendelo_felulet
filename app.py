@@ -160,7 +160,11 @@ if st.session_state.authentication_status:
         with col1:
             st.text_input("E-mail* (kötelező)", key='email_user')
         with col2:
-            st.text_input("Telefon (opcionális)", key='telefon')
+            if st.session_state.username == 'hellenergy':
+                telephone_string = "Telefon (kötelező)"
+            else:
+                telephone_string = "Telefon (opcionális)"
+            st.text_input(telephone_string, key='telefon')
             # create default szamlazasi infok that is changed based on the username
         with col1:
             try:
@@ -278,6 +282,12 @@ if st.session_state.authentication_status:
                     # if extrak contains 'nem kérek extrát' then show warning
                     if 'nem kérek extrát' in st.session_state.extrak:
                         st.warning("Ha nem kért extrát, akkor ne válasszon ki más extrát.")
+                        error_counter += 1
+
+                # check if telephone number is filled out if it is mandatory
+                if st.session_state.username == 'hellenergy':
+                    if len(st.session_state.telefon) < 4:
+                        st.warning("Kérjük adja meg a telefonszámát!")
                         error_counter += 1
                 
                 if len(st.session_state.extrak) < 1:
